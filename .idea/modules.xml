@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/IDel.iml" filepath="$PROJECT_DIR$/.idea/IDel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DemoTjapka/TicTocGema/TicTocGema.iml" filepath="$PROJECT_DIR$/DemoTjapka/TicTocGema/TicTocGema.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CodeWars/U3/U3.iml" filepath="$PROJECT_DIR$/CodeWars/U3/U3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itProger/UROK 04      Условные операторы (3 типа условий)/UROK 04      Условные операторы (3 типа условий).iml" filepath="$PROJECT_DIR$/itProger/UROK 04      Условные операторы (3 типа условий)/UROK 04      Условные операторы (3 типа условий).iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 04 03.11.22 01/UROK 04 03.11.22 01.iml" filepath="$PROJECT_DIR$/AitArT/UROK 04 03.11.22 01/UROK 04 03.11.22 01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 04 03.11.22 2/UROK 04 03.11.22 2.iml" filepath="$PROJECT_DIR$/AitArT/UROK 04 03.11.22 2/UROK 04 03.11.22 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 04 03.11.22 3/UROK 04 03.11.22 3.iml" filepath="$PROJECT_DIR$/AitArT/UROK 04 03.11.22 3/UROK 04 03.11.22 3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 04 03.11.22 4/UROK 04 03.11.22 4.iml" filepath="$PROJECT_DIR$/AitArT/UROK 04 03.11.22 4/UROK 04 03.11.22 4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 04 03.11.22 5/UROK 04 03.11.22 5.iml" filepath="$PROJECT_DIR$/AitArT/UROK 04 03.11.22 5/UROK 04 03.11.22 5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 04 03.11.22 Homework/UROK 04 03.11.22 Homework.iml" filepath="$PROJECT_DIR$/AitArT/UROK 04 03.11.22 Homework/UROK 04 03.11.22 Homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itProger/UROK 05     ARRAYS/UROK 05     ARRAYS.iml" filepath="$PROJECT_DIR$/itProger/UROK 05     ARRAYS/UROK 05     ARRAYS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 05 05.11.22 01/UROK 05 05.11.22 01.iml" filepath="$PROJECT_DIR$/AitArT/UROK 05 05.11.22 01/UROK 05 05.11.22 01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 05 06.11.221 HomeWork/UROK 05 06.11.221 HomeWork.iml" filepath="$PROJECT_DIR$/AitArT/UROK 05 06.11.221 HomeWork/UROK 05 06.11.221 HomeWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itProger/UROK 06     Цыклы/UROK 06     Цыклы.iml" filepath="$PROJECT_DIR$/itProger/UROK 06     Цыклы/UROK 06     Цыклы.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 06 07.11.22 1/UROK 06 07.11.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 06 07.11.22 1/UROK 06 07.11.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 06 07.11.22 2/UROK 06 07.11.22 2.iml" filepath="$PROJECT_DIR$/AitArT/UROK 06 07.11.22 2/UROK 06 07.11.22 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 06 07.11.22 HomeWork/UROK 06 07.11.22 HomeWork.iml" filepath="$PROJECT_DIR$/AitArT/UROK 06 07.11.22 HomeWork/UROK 06 07.11.22 HomeWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itProger/UROK 07     Methods/UROK 07     Methods.iml" filepath="$PROJECT_DIR$/itProger/UROK 07     Methods/UROK 07     Methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 07 08.11.22/UROK 07 08.11.22.iml" filepath="$PROJECT_DIR$/AitArT/UROK 07 08.11.22/UROK 07 08.11.22.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 07 08.11.22 2/UROK 07 08.11.22 2.iml" filepath="$PROJECT_DIR$/AitArT/UROK 07 08.11.22 2/UROK 07 08.11.22 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itProger/UROK 08     Отслеживание исключений/UROK 08     Отслеживание исключений.iml" filepath="$PROJECT_DIR$/itProger/UROK 08     Отслеживание исключений/UROK 08     Отслеживание исключений.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 08 09.11.22/UROK 08 09.11.22.iml" filepath="$PROJECT_DIR$/AitArT/UROK 08 09.11.22/UROK 08 09.11.22.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 08 09.11.22 1/UROK 08 09.11.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 08 09.11.22 1/UROK 08 09.11.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 08 09.11.22 2/UROK 08 09.11.22 2.iml" filepath="$PROJECT_DIR$/AitArT/UROK 08 09.11.22 2/UROK 08 09.11.22 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 08 09.11.22 3/UROK 08 09.11.22 3.iml" filepath="$PROJECT_DIR$/AitArT/UROK 08 09.11.22 3/UROK 08 09.11.22 3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itProger/UROK 09     Запись и чтение данных из файлов/UROK 09     Запись и чтение данных из файлов.iml" filepath="$PROJECT_DIR$/itProger/UROK 09     Запись и чтение данных из файлов/UROK 09     Запись и чтение данных из файлов.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 09 10.11.22 1/UROK 09 10.11.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 09 10.11.22 1/UROK 09 10.11.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 09 10.11.22 2/UROK 09 10.11.22 2.iml" filepath="$PROJECT_DIR$/AitArT/UROK 09 10.11.22 2/UROK 09 10.11.22 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itProger/UROK 10     Основы ООП. Классы, объекты, конструкторы/UROK 10     Основы ООП. Классы, объекты, конструкторы.iml" filepath="$PROJECT_DIR$/itProger/UROK 10     Основы ООП. Классы, объекты, конструкторы/UROK 10     Основы ООП. Классы, объекты, конструкторы.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 10 11.11.22 1/UROK 10 11.11.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 10 11.11.22 1/UROK 10 11.11.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itProger/UROK 11     Интерфейсы и перечисления Enum/UROK 11     Интерфейсы и перечисления Enum.iml" filepath="$PROJECT_DIR$/itProger/UROK 11     Интерфейсы и перечисления Enum/UROK 11     Интерфейсы и перечисления Enum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 11 14.11.22 1/UROK 11 14.11.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 11 14.11.22 1/UROK 11 14.11.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 11 14.11.22 2/UROK 11 14.11.22 2.iml" filepath="$PROJECT_DIR$/AitArT/UROK 11 14.11.22 2/UROK 11 14.11.22 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 11 14.11.22 3/UROK 11 14.11.22 3.iml" filepath="$PROJECT_DIR$/AitArT/UROK 11 14.11.22 3/UROK 11 14.11.22 3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/itProger/UROK 12     Работа с потоками данных/UROK 12     Работа с потоками данных.iml" filepath="$PROJECT_DIR$/itProger/UROK 12     Работа с потоками данных/UROK 12     Работа с потоками данных.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 12 15.11.22 1/UROK 12 15.11.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 12 15.11.22 1/UROK 12 15.11.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 13 16.11.22 1/UROK 13 16.11.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 13 16.11.22 1/UROK 13 16.11.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 13 16.11.22 2/UROK 13 16.11.22 2.iml" filepath="$PROJECT_DIR$/AitArT/UROK 13 16.11.22 2/UROK 13 16.11.22 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 14 17.11.22 1/UROK 14 17.11.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 14 17.11.22 1/UROK 14 17.11.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 15 18.11.22 1/UROK 15 18.11.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 15 18.11.22 1/UROK 15 18.11.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 15 21.11.22 1/UROK 15 21.11.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 15 21.11.22 1/UROK 15 21.11.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 16 22.11.22 1 String Tools Array Tools/UROK 16 22.11.22 1 String Tools.iml" filepath="$PROJECT_DIR$/AitArT/UROK 16 22.11.22 1 String Tools Array Tools/UROK 16 22.11.22 1 String Tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 17 23.11.22 1/UROK 17 23.11.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 17 23.11.22 1/UROK 17 23.11.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 17 23.11.22 2/UROK 17 23.11.22 2.iml" filepath="$PROJECT_DIR$/AitArT/UROK 17 23.11.22 2/UROK 17 23.11.22 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 18 23.11.22 1/UROK 18 23.11.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 18 23.11.22 1/UROK 18 23.11.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 18 23.11.22 2/UROK 18 23.11.22 2.iml" filepath="$PROJECT_DIR$/AitArT/UROK 18 23.11.22 2/UROK 18 23.11.22 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 18 23.11.22 HomtWork Books/UROK 18 23.11.22 HomtWork Books.iml" filepath="$PROJECT_DIR$/AitArT/UROK 18 23.11.22 HomtWork Books/UROK 18 23.11.22 HomtWork Books.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 19 24.11.22 Steuer/UROK 19 24.11.22 Steuer.iml" filepath="$PROJECT_DIR$/AitArT/UROK 19 24.11.22 Steuer/UROK 19 24.11.22 Steuer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 20 28.11.22 1/UROK 20 28.11.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 20 28.11.22 1/UROK 20 28.11.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 21 29.11.22 1/UROK 21 29.11.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 21 29.11.22 1/UROK 21 29.11.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 21 29.11.22 2 Quiz/UROK 21 29.11.22 2 Quiz.iml" filepath="$PROJECT_DIR$/AitArT/UROK 21 29.11.22 2 Quiz/UROK 21 29.11.22 2 Quiz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 21 29.11.22 3 Quiz 2/UROK 21 29.11.22 3 Quiz 2.iml" filepath="$PROJECT_DIR$/AitArT/UROK 21 29.11.22 3 Quiz 2/UROK 21 29.11.22 3 Quiz 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 21 29.11.22 4 Duck/src/UROK 21 29.11.22 4 Duck.iml" filepath="$PROJECT_DIR$/AitArT/UROK 21 29.11.22 4 Duck/src/UROK 21 29.11.22 4 Duck.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 21 29.11.22 4 Duck/UROK 21 29.11.22 4 Duck1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 21 29.11.22 4 Duck/UROK 21 29.11.22 4 Duck1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 21 29.11.22 5 HomeWork Calc/UROK 21 29.11.22 5 HomeWork Calc.iml" filepath="$PROJECT_DIR$/AitArT/UROK 21 29.11.22 5 HomeWork Calc/UROK 21 29.11.22 5 HomeWork Calc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 22 30.11.22 1 trigel/UROK 22 30.11.22 1 trigel.iml" filepath="$PROJECT_DIR$/AitArT/UROK 22 30.11.22 1 trigel/UROK 22 30.11.22 1 trigel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 22 30.11.22 2 String/UROK 22 30.11.22 2 String.iml" filepath="$PROJECT_DIR$/AitArT/UROK 22 30.11.22 2 String/UROK 22 30.11.22 2 String.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 23 01.12.22 1/UROK 23 01.12.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 23 01.12.22 1/UROK 23 01.12.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 24 02.12.22 1/UROK 24 02.12.22 1.iml" filepath="$PROJECT_DIR$/AitArT/UROK 24 02.12.22 1/UROK 24 02.12.22 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 24 02.12.22 HomeWork/UROK 24 02.12.22 HomeWork.iml" filepath="$PROJECT_DIR$/AitArT/UROK 24 02.12.22 HomeWork/UROK 24 02.12.22 HomeWork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 25 06.12.22/UROK 25 06.12.22.iml" filepath="$PROJECT_DIR$/AitArT/UROK 25 06.12.22/UROK 25 06.12.22.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 25 06.12.22 HomeWork Student/UROK 25 06.12.22 HomeWork Student.iml" filepath="$PROJECT_DIR$/AitArT/UROK 25 06.12.22 HomeWork Student/UROK 25 06.12.22 HomeWork Student.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 25 06.12.22 Kosul/UROK 25 06.12.22 Kosul.iml" filepath="$PROJECT_DIR$/AitArT/UROK 25 06.12.22 Kosul/UROK 25 06.12.22 Kosul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 26 08.12.22 1 InputNumb/UROK 26 08.12.22 1 InputNumb.iml" filepath="$PROJECT_DIR$/AitArT/UROK 26 08.12.22 1 InputNumb/UROK 26 08.12.22 1 InputNumb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 26 10.12.22 HomeWork   15 Задач/UROK 26 10.12.22 HomeWork   15 Задач.iml" filepath="$PROJECT_DIR$/AitArT/UROK 26 10.12.22 HomeWork   15 Задач/UROK 26 10.12.22 HomeWork   15 Задач.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 27 12.12.22 HomeWork   Forms/UROK 27 12.12.22 HomeWork   Forms.iml" filepath="$PROJECT_DIR$/AitArT/UROK 27 12.12.22 HomeWork   Forms/UROK 27 12.12.22 HomeWork   Forms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 28 14.12.22 1 Magazin moi/UROK 28 14.12.22 1 Magazin moi.iml" filepath="$PROJECT_DIR$/AitArT/UROK 28 14.12.22 1 Magazin moi/UROK 28 14.12.22 1 Magazin moi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 29 15.12.22 1 FormsUrok/UROK 29 15.12.22 1 FormsUrok.iml" filepath="$PROJECT_DIR$/AitArT/UROK 29 15.12.22 1 FormsUrok/UROK 29 15.12.22 1 FormsUrok.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 29 15.12.22 2 Hashcode/UROK 29 15.12.22 2 Hashcode.iml" filepath="$PROJECT_DIR$/AitArT/UROK 29 15.12.22 2 Hashcode/UROK 29 15.12.22 2 Hashcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 29 15.12.22 3   Homework/UROK 29 15.12.22 3   Homework.iml" filepath="$PROJECT_DIR$/AitArT/UROK 29 15.12.22 3   Homework/UROK 29 15.12.22 3   Homework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 29 15.12.22 3  Magazin Lecha/UROK 29 15.12.22 3  Magazin Lecha.iml" filepath="$PROJECT_DIR$/AitArT/UROK 29 15.12.22 3  Magazin Lecha/UROK 29 15.12.22 3  Magazin Lecha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AitArT/UROK 30 23.12.22 3   ArrayList/UROK 30 23.12.22 3   ArrayList.iml" filepath="$PROJECT_DIR$/AitArT/UROK 30 23.12.22 3   ArrayList/UROK 30 23.12.22 3   ArrayList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DemoTjapka/gitDemo/gitDemo.iml" filepath="$PROJECT_DIR$/DemoTjapka/gitDemo/gitDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DemoTjapka/matheGame/matheGame.iml" filepath="$PROJECT_DIR$/DemoTjapka/matheGame/matheGame.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DemoTjapka/pl/pl.iml" filepath="$PROJECT_DIR$/DemoTjapka/pl/pl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DemoTjapka/trenka1/trenka1.iml" filepath="$PROJECT_DIR$/DemoTjapka/trenka1/trenka1.iml" />
+    </modules>
+  </component>
+</project>
