@@ -53,7 +53,7 @@ public class ArrayTools {
     public static int search(int [] array, int number){
         for (int i=0; i<array.length; i++){
             if(array[i]==number){  //если текущая ячейка массива равна заданному числа
-                return i;          //возвращаем индекс - ячейку в которой лежит это значение
+                return i;                    //возвращаем индекс - ячейку в которой лежит это значение
             }
         }
         return -1;
