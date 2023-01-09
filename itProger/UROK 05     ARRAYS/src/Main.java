@@ -38,7 +38,7 @@ public class Main {
         System.out.println(arrDynamc.get(0));
         System.out.println("___________LinkedList ");
 
-        LinkedList<String>arrNames=new LinkedList<>() ;
+        LinkedList<String>arrNames=new LinkedList<>() ;`
         arrNames.add("Hello");
         arrNames.add("World");
 
