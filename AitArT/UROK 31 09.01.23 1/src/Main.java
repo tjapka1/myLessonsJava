@@ -12,17 +12,24 @@ public class Main {
 
         getRndList(num, 25, 10, 1);
         System.out.println(num);
-        System.out.println(num.size());
+        System.out.println(num.size());                                                                //вот тут добавляю я ещё 23 числа, к двум существующем, первые 2 числа не изменились
+
         getRndList(num, 30, 100, 1);
         System.out.println(num);
-        System.out.println(num.size());
+        System.out.println(num.size());                                                                // тут я добовляю ещё 5 числа, но с 3 по 25 число тоже меняються
+
         getRndList(num, 50, 100, 1);
         System.out.println(num);
-        System.out.println(num.size());
+        System.out.println(num.size());                                                                // тут я добовляю ещё 20 числа, но с 3 по 30 число тоже меняються
+
         getRndList(num, 53, 0, -5);
         System.out.println(num);
-        System.out.println(num.size());
+        System.out.println(num.size());                                                                // тут я добовляю ещё 3 числа, но с 3 по 50 число тоже меняються
 
+                                                                                                                        // Кал сделать чтоб только добавляющие Числа генерировались
+
+
+                                                                                                                        // А старые оставались и не генерировались заново??????????
 
         System.out.println("____________");
         System.out.println(getRndList(5,10,0));
@@ -45,7 +52,6 @@ public class Main {
         int count= newSize - list.size();
         for (int i = 0; i < count; i++) {
             list.add(numRand(max, min));
-
         }
         return list;
     }
