@@ -74,7 +74,7 @@ public class Main {
             list.add(numRand(max, min));
         }
        // Collections.sort(list);
-        //bubbleSort(list);
+        bubbleSort(list);
         return list;
     }
     public static int numRand(int max, int min){
