@@ -65,7 +65,7 @@ public class Main {
 
         }
         //Collections.sort(list);
-        //bubbleSort(list);
+        bubbleSort(list);
         return list;
     }
     public static List<Integer> getRndList(List<Integer> list, int newSize, int max, int min){
@@ -86,7 +86,7 @@ public class Main {
         for (int i = 0; i < inputListSize; i++) {
             for (int j = 0; j < inputListSize; j++) {
                 if (inputList.get(j) > inputList.get(j+1)){
-                    int temp = inputList.get(j+1);
+                    int temp = inputList.get(j);
                     inputList.set(j,inputList.get(j+1));
                     inputList.set(j+1, temp);
                 }
