@@ -23,7 +23,7 @@ public class Main {
         System.out.println(num.size());
         // тут я добовляю ещё 20 числа, но с 3 по 30 число тоже меняються
 
-        getRndList(num, 60, 100, -5);
+        getRndList(num, 60, 100, -100);
         System.out.println(num);
         System.out.println(num.size());
 
