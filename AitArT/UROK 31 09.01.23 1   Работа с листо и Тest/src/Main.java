@@ -1,6 +1,15 @@
-import java.util.*;
+/*
+Получить List из N случайных целых чисел
+* Заполнить лист так, что бы числа шли в не убывающем порядке
+ */
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class Main {
+    private static Random rnd= new Random(System.nanoTime());
+
     public static void main(String[] args) {
 
         ArrayList <Integer> num =new ArrayList<>();
@@ -31,11 +40,14 @@ public class Main {
         bubbleSort(num);
         System.out.println(num);
 
+        System.out.println("_____generateSortList__________");
+        System.out.println(generateSortList(10));
+
         // тут я добовляю ещё 3 числа, но с 3 по 50 число тоже меняються
         // Кал сделать чтоб только добавляющие Числа генерировались
         // А старые оставались и не генерировались заново??????????
 
-        /*
+
         System.out.println("_____checkList__________");
         System.out.println(checkList(num));
 
@@ -45,7 +57,6 @@ public class Main {
         System.out.println(getRndList(5,10,0));
         System.out.println(getRndList(15, 10, -10));
 
-*/
     }
 
     public static boolean checkList (List<Integer> list){
@@ -77,6 +88,41 @@ public class Main {
         bubbleSort(list);
         return list;
     }
+    public static List<Integer> generateSortList(int size){
+        List<Integer> resList=new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            insert (resList, getNextValue()) ;
+        }
+        return resList;
+    }
+
+    public static void insert(List<Integer> resList, int nextValue) {
+        if (resList.isEmpty() || resList.get(resList.size()-1)<=nextValue){
+            resList.add(nextValue);
+        }else {
+            int indexToInsert=getIndexToInsert(resList, nextValue);
+            resList.add(indexToInsert, nextValue);
+        }
+
+    }
+
+    public static int getIndexToInsert(List<Integer> resList, int nextValue) {
+        int resIndex=0;
+        while (resList.get(resIndex)<nextValue){
+            resIndex++;
+        }
+        return resIndex;
+    }
+
+    public static int getNextValue(){
+        int min = 5;
+        int max = 10;
+        return rnd.nextInt(max-min+1)+min;
+    }
+    public static int getNextValue(int min, int max){
+        return rnd.nextInt(max-min+1)+min;
+    }
+
     public static int numRand(int max, int min){
         int rnd=(int) (min + Math.random() * ((long)max - min + 1));
         return rnd;
@@ -93,6 +139,8 @@ public class Main {
             }
         }
         }
+
+
 
 
 
