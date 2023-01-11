@@ -11,7 +11,7 @@ public class Person {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-    private String firstNameFormat(String firstName){
+    public String firstNameFormat(){
         String res="";
         res=firstName.substring(0, 1) + ".";
         return res;
@@ -25,8 +25,9 @@ public class Person {
     public int getAge() {
         return age;
     }
+
     @Override
     public String toString() {
-        return firstNameFormat(firstName) +" "+ lastName+" " +age ;
+        return firstNameFormat() +" "+ lastName+" " +age ;
     }
 }

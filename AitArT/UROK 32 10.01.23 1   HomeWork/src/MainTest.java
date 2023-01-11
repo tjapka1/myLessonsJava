@@ -1,7 +1,7 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 public class MainTest {
        /*
@@ -11,17 +11,20 @@ public class MainTest {
        значения null. Необходимо реализовать тесты.
         */
 
-    @Test
-    public static void printAgeMin (){
-        List<Person> test=new ArrayList<>();
-        test.add(new Person("Иван", "Иванов", 30));
-        test.add(new Person("Вова", "Мухин"));
-        test.add(new Person("Илья", "Муровец", 23));
-        test.add(new Person("Катя", "Муровец"));
-        test.add(new Person("Вася", "Петров", 52));
-        test.add(new Person("Света", "Мурнина", 43));
 
-        int  value = 0;
+    @Test
+    public void initialsNameTest(){
+        Person [] people={
+                new Person("Иван", "Иванов", 30),
+
+        };
+        String [] expectedResult ={"И.", };
+        String[] actualResult = new String[people.length];
+
+        for (int i = 0; i < people.length; i++) {
+            actualResult[i]=people[i].firstNameFormat();
+        }
+        Assertions.assertEquals(Arrays.asList(expectedResult), Arrays.asList(actualResult));
 
     }
 

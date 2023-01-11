@@ -20,13 +20,18 @@ public class Main {
         people.add(new Person("Света", "Мурнина", 43));
         people.add(new Person("Света", "Мурнина", -43));
 
-        printAgeNull(people);
-        printAgeMin(people, 30);
-        printAgeMax(people,30);
+        List<Person> ageNull=AgeNull(people);
+        System.out.println(ageNull);
+
+        List<Person> minAge=getAgeMin(people, 30);
+        System.out.println(minAge);
+
+        List<Person> maxAge=getAgeMax(people,30);
+        System.out.println(maxAge);
 
     }
 
-    public static List<Person> printAgeNull(List<Person> inputList){
+    public static List<Person> AgeNull(List<Person> inputList){
         List<Person> outputList= new ArrayList<>();
         if (inputList == null)return outputList;
         for (int i = 0; i < inputList.size(); i++) {
@@ -34,13 +39,11 @@ public class Main {
                 outputList.add(inputList.get(i));
             }
         }
-        System.out.print("Пожалуйста задайте правильный возраст!!!   |   ");
-        System.out.print("False    |   ");
+        System.out.println("Проверьте возраст");
         bubleSort(outputList);
-        System.out.println(outputList);
         return outputList;
     }
-    public static List<Person> printAgeMin(List<Person> inputList, int setAge){
+    public static List<Person> getAgeMin(List<Person> inputList, int setAge){
         List<Person> outputList= new ArrayList<>();
         if (inputList == null || setAge<=0)return outputList;
         for (int i = 0; i < inputList.size(); i++) {
@@ -49,11 +52,9 @@ public class Main {
             }
        }
         bubleSort(outputList);
-        System.out.print("Min | ");
-        System.out.println(outputList);
         return outputList;
     }
-    public static List<Person> printAgeMax(List<Person> inputList, int setAge){
+    public static List<Person> getAgeMax(List<Person> inputList, int setAge){
         List<Person> outputList= new ArrayList<>();
         if (inputList == null || setAge<=0)return outputList;
         for (int i = 0; i < inputList.size(); i++) {
@@ -62,8 +63,6 @@ public class Main {
             }
         }
         bubleSort(outputList);
-        System.out.print("Max | ");
-        System.out.print(outputList);
         return outputList;
     }
     public static void bubleSort (List<Person> inputList){
