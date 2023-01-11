@@ -50,10 +50,10 @@ public class MainTest {
     testUsers.add(new User("Durkovf", "Walja", 23));
 
     //Вот тут почему то не выходит
-      //String actionResult= Main.chenchLsFsName(testUsers,1);
+        User actionResult= Main.chenchLsFsName(testUsers,1);
         String expectedResult="1 | Walja Durkovf 23";
 
-        //Assertions.assertEquals(expectedResult, actionResult);
+        Assertions.assertEquals(expectedResult, actionResult);
     }
 
 

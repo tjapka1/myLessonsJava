@@ -7,6 +7,8 @@
 Написать тесты
  */
 
+import java.util.Objects;
+
 public class User {
     private static int count=0;
 
@@ -39,6 +41,19 @@ public class User {
 
     public int getId() {
         return id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id && age == user.age && fName.equals(user.fName) && lName.equals(user.lName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, fName, lName, age);
     }
 
     @Override

@@ -42,14 +42,16 @@ public class Main {
 
     }
 
-    public static void chenchLsFsName(List<User>inputlist, int id){
+    public static User chenchLsFsName(List<User>inputlist, int id){
         for (int i = 0; i < inputlist.size(); i++) {
            if (id==inputlist.get(i).getId()){
                String tempF = inputlist.get(i).getfName();
                inputlist.get(i).setfName(inputlist.get(i).getlName());
                inputlist.get(i).setlName(tempF);
+               return  inputlist.get(i);
            }
         }
+        return null;
     }
 
 
