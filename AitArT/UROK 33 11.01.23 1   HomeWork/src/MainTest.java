@@ -55,6 +55,4 @@ public class MainTest {
 
         Assertions.assertEquals(expectedResult, actionResult);
     }
-
-
 }

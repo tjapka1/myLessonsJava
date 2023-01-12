@@ -1,0 +1,19 @@
+public class Owl implements Send{
+    @Override
+    public void send() {
+        sendFunk1();
+        sendFunk2();
+        sendFunk3();
+    }
+
+    private void sendFunk1(){
+        System.out.println("Привязываю письмо в ноге ");
+    }
+    private void sendFunk2(){
+        System.out.println("Даю Корма");
+    }
+    private  void sendFunk3(){
+        System.out.println("отправляю в полёт");
+    }
+
+}
