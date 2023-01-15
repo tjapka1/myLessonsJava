@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Lists {
@@ -10,11 +9,8 @@ public class Lists {
         productList.add(new Electro("Mobil","Samsung", "A30", 350.50, 6, "256 GB, 128MP"));
         productList.add(new Clothes("Skirt", "Nike", "RobSk", 15, 5 , "m - Xl"));
         productList.add(new Food("Danone", "ShokoJouhurt", 0.90 , 25));
-
         productList.add(new Clothes("Skirt", "Adidas", "AdRobSk", 25, 5 , "m - Xl"));
-
         productList.add(new Clothes("Boots", "Nike", "Robwoman", 45, 2 , "41"));
-
         productList.add(new Clothes("Boots", "Nike", "Rob", 50, 3 , "46"));
         productList.add(new Food("Milka", "White Shoko", 1.10 , 5));
         productList.add(new Clothes("Shorts", "Nike", "RobSh", 25, 5 , "m - Xl"));
@@ -23,12 +19,11 @@ public class Lists {
         productList.add(new Electro("Mobile","Ouktitel", "WP19", 450.50, 2, "256 GB"));
         productList.add(new Clothes("Shorts", "Adidas", "AdRobSh", 35, 5 , "m - Xl"));
 
-        ComparatorBrand comparatorBrand=new ComparatorBrand();
-        Collections.sort(productList, comparatorBrand);
-        Tools.print(productList);
-        System.out.println("__________________________________");
-        Tools.comparSortBrand(productList);
 
+
+
+
+    UserMenuSort.UserMenuSort(productList);
 
 
 
