@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         /*
@@ -18,69 +16,29 @@ public class Main {
 
 
 
-        System.out.println("Введите номер способа отправки Писма");
-        userInput();
 
-    }
-    private static void userInput(){
-        System.out.println("1 . Dhl    2 . Email    3 OWL");
-        Scanner sc=new Scanner(System.in);
-        byte userIn=sc.nextByte();
-        checkInputUserData(userIn);
-    }
-    private static void checkInputUserData(byte userIn ){
-        boolean checkFlag=true;
-       int count=0;
-        while (checkFlag) {
-            if (userIn == 1 || userIn ==2 || userIn==3) {
-                selectFunction(userIn);
-                checkFlag = true;
-                break;
-            }else if (userIn==0){
-                System.out.println("Вы вышли");
-                break;
-            }else {
-                //Почему каунтер только 1 раз срабатывает??????????
 
-                count++;
 
-                System.out.println("Вы ввели не правильную Функцию");
-                System.out.println("Или 0 для выхода из Программы ");
+        MailDeliveryService[] services={
+                new Dhl(),
+                new EMail(),
+                new Owl(),
+                //new Hermes()
+        };
 
-                System.out.println("Count" + count);
-                userInput();
+        Sender defSender = new Sender(services[1]);
 
-                if (count==5){
-                    System.out.println("Вы ввели 5 раз не Правильно");
-                    System.out.println("Программа закрываеться, ПОКЕДА");
-                    break;}
-                checkFlag = false;}
 
-            }
+        MenuSelectedMailService menu = new MenuSelectedMailService(services);
+        MailDeliveryService mailDeliveryService = menu.select();
+        if (mailDeliveryService!=null){ // use static method send()
+            Sender.send(mailDeliveryService);
+        } else {  // use non static method send()
+            defSender.send();
         }
-    private static void selectFunction(byte userIn){
-            Send dhl =new Dhl();
-            Send email=new EMail();
-            Send owl = new Owl();
-            switch (userIn){
-                case 1:
-                    System.out.println("Dhl");
-                    dhl.send();
-                    break;
-                case 2:
-                    System.out.println("Email");
-                    email.send();
-                    break;
-                case 3:
-                    System.out.println("OWl");
-                    owl.send();
-                    break;
-                default:
-                    System.out.println("Error");
-            }
-
-        }
-
+    }
 
 
     }
+
+

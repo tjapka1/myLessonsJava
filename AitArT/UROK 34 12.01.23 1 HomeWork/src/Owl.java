@@ -1,6 +1,6 @@
-public class Owl implements Send{
+public class Owl implements MailDeliveryService {
     @Override
-    public void send() {
+    public void sendmail() {
         sendFunk1();
         sendFunk2();
         sendFunk3();
@@ -14,6 +14,15 @@ public class Owl implements Send{
     }
     private  void sendFunk3(){
         System.out.println("отправляю в полёт");
+    }
+
+    @Override
+    public String name (){
+        return "Owl";
+    }
+    @Override
+    public String toString (){
+        return "Owl";
     }
 
 }

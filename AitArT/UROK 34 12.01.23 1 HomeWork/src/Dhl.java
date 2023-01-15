@@ -1,6 +1,6 @@
-public class Dhl  implements Send {
+public class Dhl  implements MailDeliveryService {
     @Override
-    public void send() {
+    public void sendmail() {
         sendFunk1();
         sendFunk2();
         sendFunk3();
@@ -14,6 +14,15 @@ public class Dhl  implements Send {
     }
     private  void sendFunk3(){
         System.out.println("иду на  почту");
+    }
+    @Override
+    public String name (){
+        return "Dhl";
+    }
+
+    @Override
+    public String toString (){
+        return "Dhl";
     }
 
 }
