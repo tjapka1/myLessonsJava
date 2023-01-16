@@ -1,6 +1,4 @@
-import java.util.Comparator;
-
-public class ComparatorPriceMin implements Comparator<Product> {
+public class ComparatorPriceMin implements ProductCompararator{
 
 
     @Override
@@ -8,5 +6,10 @@ public class ComparatorPriceMin implements Comparator<Product> {
         if (o1.getPrice()>o2.getPrice()){return 1;}
         else if (o1.getPrice()<o2.getPrice()){return -2;}
         return 0;
+    }
+
+    @Override
+    public String name() {
+        return "Минимальная Цена";
     }
 }

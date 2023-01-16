@@ -1,6 +1,4 @@
-import java.util.Comparator;
-
-public class ComparatorPriceMax implements Comparator<Product> {
+public class ComparatorPriceMax implements ProductCompararator{
 
 
     @Override
@@ -11,5 +9,10 @@ public class ComparatorPriceMax implements Comparator<Product> {
             return -2;
         }
         return 0;
+    }
+
+    @Override
+    public String name() {
+        return "Максимальная Цена";
     }
 }

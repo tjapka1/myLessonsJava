@@ -35,7 +35,9 @@ public abstract class Product  {
     public String getName() {
         return name;
     }
+    public abstract int getId();
 
+    ;
     @Override
     public String toString() {
         return

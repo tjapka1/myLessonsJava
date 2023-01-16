@@ -16,16 +16,9 @@ public class Lists {
         productList.add(new Clothes("Shorts", "Nike", "RobSh", 25, 5 , "m - Xl"));
         productList.add(new Food("Danone", "Jouhurt", 0.70 , 20));
         productList.add(new Clothes("Boots", "Adidas", "AdRob", 65, 3 , "46"));
-        productList.add(new Electro("Mobile","Ouktitel", "WP19", 450.50, 2, "256 GB"));
+        productList.add(new Electro("Mobil","Ouktitel", "WP19", 450.50, 2, "256 GB"));
         productList.add(new Clothes("Shorts", "Adidas", "AdRobSh", 35, 5 , "m - Xl"));
 
-
-
-
-
-    UserMenuSort.UserMenuSort(productList);
-
-
-
+        SortFunktion.sortList(productList);
     }
 }

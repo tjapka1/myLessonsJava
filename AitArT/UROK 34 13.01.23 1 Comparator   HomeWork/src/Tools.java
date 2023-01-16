@@ -64,4 +64,26 @@ public class Tools {
         return outputList;
     }
 
+    public static List<Product> comparSortIdMin(List<Product> inputList){
+        CompatatorIdMin compatatorIdMin=new CompatatorIdMin();
+        List<Product> outpputList=new ArrayList<>();
+        Collections.sort(inputList, compatatorIdMin);
+        for (int i = 0; i < inputList.size(); i++) {
+            outpputList.add(inputList.get(i));
+        }
+        System.out.println(" _____Max Id_____");
+        print(outpputList);
+        return outpputList;
+    }
+    public static List<Product> comparSortIdMax(List<Product> inputList){
+        CompatatorIdMax compatatorIdMax = new CompatatorIdMax();
+        List<Product> outpputList=new ArrayList<>();
+        Collections.sort(inputList, compatatorIdMax);
+        for (int i = 0; i < inputList.size(); i++) {
+            outpputList.add(inputList.get(i));
+        }
+        System.out.println(" _____Max Id_____");
+        print(outpputList);
+        return outpputList;
+    }
     }
