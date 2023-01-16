@@ -19,6 +19,7 @@ public class Lists {
         productList.add(new Electro("Mobil","Ouktitel", "WP19", 450.50, 2, "256 GB"));
         productList.add(new Clothes("Shorts", "Adidas", "AdRobSh", 35, 5 , "m - Xl"));
 
+
         SortFunktion.sortList(productList);
     }
 }
