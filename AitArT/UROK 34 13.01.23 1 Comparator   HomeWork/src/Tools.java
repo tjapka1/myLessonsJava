@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Tools {
@@ -8,7 +6,7 @@ public class Tools {
             System.out.println(inputList.get(i));
         }
     }
-    public static List<Product> comparSortBrand(List<Product> inputList){
+   /* public static List<Product> comparSortBrand(List<Product> inputList){
         ComparatorBrand comparatorBrand=new ComparatorBrand();
         List<Product> outputList=new ArrayList<>();
         Collections.sort(inputList, comparatorBrand);
@@ -85,5 +83,5 @@ public class Tools {
         System.out.println(" _____Max Id_____");
         print(outpputList);
         return outpputList;
-    }
+    }*/
     }
