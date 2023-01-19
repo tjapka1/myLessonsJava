@@ -18,12 +18,7 @@ public class Programmer extends Worker{
     @Override
     public String taskMsg(String status){
         String outputStr="";
-        /*try {
-            doWork(status);
-        }catch (ProgrammerBusyException e){
-            System.out.println("ProgrammerBusyException");
-        }
-*/
+
         return doWork(outputStr);
 
     }
@@ -31,6 +26,15 @@ public class Programmer extends Worker{
 @Override
     public String doWork(String taskMsg) {
     String outputStr="";
+    try {
+
+    }catch (ArrayIndexOutOfBoundsException e){
+        System.out.println("ArrayIndexOutOfBoundsException");
+    }catch (ProgrammerBusyException e){
+        System.out.println("ProgrammerBusyException");
+    }catch (ProgrammerUnavailableNowException e){
+        System.out.println("ProgrammerUnavailableNowException");
+    }
 
 
     return outputStr;

@@ -21,7 +21,7 @@ public class Main {
 
          */
         WorkerList workerList=new WorkerList();
-        workerList.add(new Programmer("Alex", "доступен"));
+        workerList.add(new Programmer("Ахмед", "доступен"));
         workerList.add(new Programmer("Ваня", "не доступен"));
         workerList.add(new Programmer("Вася", "занят"));
         workerList.add(new TeamLead("Вика", "доступен"));
