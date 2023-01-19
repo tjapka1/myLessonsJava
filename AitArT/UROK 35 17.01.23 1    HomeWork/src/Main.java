@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -9,12 +11,21 @@ public class Main {
 
         System.out.println(personList);
         print(personList);
-
-        System.out.println("_________");
-        System.out.println(personList.get(3));
         System.out.println(personList.size());
+        System.out.println("______________");
+       personList.remove(4);
+        print(personList);
+        System.out.println(personList.size());
+
+
     }
     public static void print(MyLinkedList list){
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+
+        }
+    }
+    public static void print(LinkedList list){
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
 

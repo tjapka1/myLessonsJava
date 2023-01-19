@@ -9,7 +9,7 @@ public class Node {
         this.objekt = person;
     }
 
-    public Node getPrev() {
+    public Node prev() {
         return prev;
     }
 
@@ -17,7 +17,7 @@ public class Node {
         this.prev = prev;
     }
 
-    public Node getNext() {
+    public Node next() {
         return next;
     }
 

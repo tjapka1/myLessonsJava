@@ -1,12 +1,12 @@
 public class MyLinkedList {
-    private Node first=null;
+    private Node first =null;
     private Node last=null;
     private int size=0;
 
 
     public boolean add(Person person){
         Node newNode = new Node(null, null, person);
-        if(first==null){
+        if(first ==null){
             first = newNode;
         } else {
             last.setNext(newNode);
@@ -14,14 +14,6 @@ public class MyLinkedList {
         }
         last = newNode;
         size++;
-
-        return true;
-    }
-    public boolean remove(int index){
-        if (last==null){return false;}
-        //if (last.getObj()== index){
-        last = last.getNext();
-
 
         return true;
     }
@@ -34,10 +26,10 @@ public class MyLinkedList {
     private Person[] toArray() {
         Person [] outputArray= new Person[size];
         int index=0;
-        Node temp=first;
+        Node temp= first;
         while (temp!=null){
             outputArray[index++]=temp.getObjekt();
-            temp=temp.getNext();
+            temp=temp.next();
         }
         return outputArray;
     }
@@ -52,7 +44,7 @@ public class MyLinkedList {
         Node temp= first;
         while (temp!=null){
             outputString+=temp.getObjekt()+" " ;
-            temp = temp.getNext();
+            temp = temp.next();
         }
         return outputString;
     }
