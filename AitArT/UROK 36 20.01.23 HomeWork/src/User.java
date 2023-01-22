@@ -11,22 +11,40 @@ public class User {
         this.email = checkEmail(email);
     }
 
-    private String checkEmail(String email)throws MyCheckedException{
+    private String checkEmail(String email){
         String outputEmail =" ";
         String mailDog=checkDog(email);
+        String mailPoint=checkPoint(mailDog);
 
-        outputEmail=mailDog;
+        outputEmail=mailPoint;
+        return outputEmail;
+    }
+
+    private String checkPoint(String mailPoint) {
+        String outputEmail =" ";
+        int indexOfPoint=mailPoint.indexOf(".");
+        System.out.println(indexOfPoint);
+        try {
+            if (indexOfPoint>0||indexOfPoint<mailPoint.length()-1);
+        }catch (MailDogException e){
+            System.out.println("Не хватает Точки");
+            outputEmail="";
+        }
+        outputEmail=mailPoint;
         return outputEmail;
     }
 
     private String checkDog(String email)throws MailDogException {
         String outputEmail =" ";
         int indexOfDog=email.indexOf("@");
+        System.out.println(indexOfDog);
         try {
-            if (indexOfDog>0|| indexOfDog<email.length());
+            if (indexOfDog>0/*|| indexOfDog < email.length()-1*/);
         }catch (MailDogException e){
-            System.out.println("");
+            System.out.println("Не хватает @");
+            outputEmail="";
         }
+        outputEmail=email;
         return outputEmail;
     }
 

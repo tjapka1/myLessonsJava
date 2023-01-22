@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        User user1=new User("John", "Lennon", 40,"Lennon@mail.com" );
+        User user1=new User("John", "Lennon", 40,"Lennon@mailcom" );
 
 
 
