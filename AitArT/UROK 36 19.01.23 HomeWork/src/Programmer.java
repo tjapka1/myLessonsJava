@@ -1,9 +1,9 @@
 public class Programmer extends Worker{
 
 
-    public Programmer(String name, String status) {
-        super(name, status);
-        taskMsg(super.getStatus());
+    public Programmer(String name) {
+        super(name);
+
     }
 /*
    1.      Допустим, у вас в программе есть класс Programmer. Кроме имени у
@@ -15,34 +15,26 @@ public class Programmer extends Worker{
         «Программист занят другой задачей» или «Программист не доступен».
 
  */
-    @Override
-    public String taskMsg(String status){
-        String outputStr="";
 
-        return doWork(outputStr);
-
-    }
-
-@Override
-    public String doWork(String taskMsg) {
-    String outputStr="";
-    try {
-
-    }catch (ArrayIndexOutOfBoundsException e){
-        System.out.println("ArrayIndexOutOfBoundsException");
-    }catch (ProgrammerBusyException e){
-        System.out.println("ProgrammerBusyException");
-    }catch (ProgrammerUnavailableNowException e){
-        System.out.println("ProgrammerUnavailableNowException");
-    }
-
-
-    return outputStr;
-    }
 
 
     @Override
     public String toString() {
         return "Programmer | " + super.toString();
+    }
+
+    @Override
+    public void setAvailable() {
+
+    }
+
+    @Override
+    public void setNotAvailable() {
+
+    }
+
+    @Override
+    public void setBusy() {
+
     }
 }

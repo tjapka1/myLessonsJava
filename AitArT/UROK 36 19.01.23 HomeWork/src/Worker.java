@@ -2,9 +2,9 @@ public abstract class Worker implements DoWork {
     private String name;
     private String status;
 
-    public Worker(String name, String status) {
+    public Worker(String name) {
         this.name = name;
-        this.status = status;
+
     }
 
     @Override

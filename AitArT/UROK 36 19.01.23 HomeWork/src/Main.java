@@ -21,12 +21,12 @@ public class Main {
 
          */
         WorkerList workerList=new WorkerList();
-        workerList.add(new Programmer("Ахмед", "доступен"));
-        workerList.add(new Programmer("Ваня", "не доступен"));
-        workerList.add(new Programmer("Вася", "занят"));
-        workerList.add(new TeamLead("Вика", "доступен"));
-        workerList.add(new TeamLead("Андрей", "не доступен"));
-        workerList.add(new TeamLead("Коля", "занят"));
+        workerList.add(new Programmer("Ахмед"));
+        workerList.add(new Programmer("Ваня"));
+        workerList.add(new Programmer("Вася"));
+        workerList.add(new TeamLead("Вика"));
+        workerList.add(new TeamLead("Андрей"));
+        workerList.add(new TeamLead("Коля"));
 
         Tools.print(workerList);
 
