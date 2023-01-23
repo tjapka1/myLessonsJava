@@ -1,9 +1,9 @@
-public class MyLinkedList {
+public class MyLinkedList<T> {
     private Node first =null;
     private Node last=null;
     private int size=0;
-    public boolean add(Person person){
-        Node newNode = new Node(null, null, person);
+    public boolean add(T value){
+        Node newNode = new Node(null, null, value);
         if(first ==null){
             first = newNode;
         } else {
@@ -15,8 +15,8 @@ public class MyLinkedList {
 
         return true;
     }
-    public boolean addFirst(Person person){
-        Node newNode = new Node(null, null, person);
+    public boolean addFirst(T value){
+        Node newNode = new Node(null, null, value);
         if(first ==null){
             last = newNode;
         }else {
@@ -39,28 +39,28 @@ public class MyLinkedList {
         }
         return res;
     }
-    private Node find(Person person) {
+    private Node find(T value) {
         Node res=first;
         while (res!=null){
-            Person temp = res.getObjekt();
-            if (person==null && temp== null )return res;
-            if (person.equals(temp))return res;
+            Object temp = res.getObjekt();
+            if (value==null && temp== null )return res;
+            if (value.equals(temp))return res;
             res=res.getNext();
         }
         return null;
     }
-    public boolean remove(Person person){
-        Node node =find(person);
+    public boolean remove(T value){
+        Node node =find(value);
         if (node!=null){
             remove(node);
             return true;
         }
         return false;
     }
-    public Person remove(int index){
+    public T remove(int index){
         Node node =find(index);
         if (node!=null){
-            remove(node.getObjekt());
+            remove((T) node.getObjekt());
     }
         else {
             return null;
@@ -68,7 +68,7 @@ public class MyLinkedList {
         return null;
     }
 
-      private Person remove(Node node){
+      private T remove(Node node){
           if (node==null && first==null)return null;
           if (node == first || node==last) {
               if (node == first) {
@@ -89,22 +89,22 @@ public class MyLinkedList {
               node.setObjekt(null);
           }
         size--;
-        return node.getObjekt();
+        return (T) node.getObjekt();
     }
-    public Person get (int index){
+ /*   public T get (int index){
         if (index<0 || index>=size)return null;
         return toArray()[index];
     }
-    private Person[] toArray() {
-        Person [] outputArray= new Person[size];
+    private  T [] toArray() {
+        T [] outputArray= new T [size];
         int index=0;
         Node temp= first;
         while (temp!=null){
-            outputArray[index++]=temp.getObjekt();
+            outputArray[index++]= (T) temp.getObjekt();
             temp=temp.getNext();
         }
         return outputArray;
-    }
+    }*/
     public int size(){
         return size;
     }

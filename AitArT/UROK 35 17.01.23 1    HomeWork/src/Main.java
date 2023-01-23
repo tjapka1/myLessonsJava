@@ -13,9 +13,13 @@ public class Main {
         print(personList);
         System.out.println(personList.size());
         System.out.println("______________");
-       personList.remove(4);
+       personList.remove(2);
+        personList.addFirst(new Person("Maga", 9));
         print(personList);
         System.out.println(personList.size());
+        System.out.println("________");
+        personList.remove(new Person("Maga", 9));
+        print(personList);
 
 
     }
