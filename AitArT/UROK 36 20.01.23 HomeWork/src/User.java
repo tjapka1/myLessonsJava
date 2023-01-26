@@ -13,28 +13,28 @@ public class User {
 
     private String checkEmail(String email){
         String outputEmail =" ";
+        if (email==null){return outputEmail;}
         String mailDog=checkDog(email);
-        String mailPoint=checkPoint(mailDog);
+        //String mailPoint=checkPoint(mailDog);
 
-        outputEmail=mailPoint;
+        outputEmail=mailDog;
         return outputEmail;
     }
-
-    private String checkPoint(String mailPoint) {
+/*
+    private String checkPoint(String mailPoint){
         String outputEmail =" ";
         int indexOfPoint=mailPoint.indexOf(".");
         System.out.println(indexOfPoint);
         try {
-            if (indexOfPoint>0||indexOfPoint<mailPoint.length()-1);
-        }catch (MailDogException e){
+            if (indexOfPoint>0/*||indexOfPoint<mailPoint.length()-1) ;
+        }catch (MailPointException e){
             System.out.println("Не хватает Точки");
             outputEmail="";
         }
         outputEmail=mailPoint;
         return outputEmail;
-    }
-
-    private String checkDog(String email)throws MailDogException {
+    }*/
+    private String checkDog(String email)throws MyUnCheckedException {
         String outputEmail =" ";
         int indexOfDog=email.indexOf("@");
         System.out.println(indexOfDog);

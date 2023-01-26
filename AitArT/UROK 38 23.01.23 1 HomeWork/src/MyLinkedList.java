@@ -42,7 +42,7 @@ public class MyLinkedList<T> {
     private Node find(T value) {
         Node res=first;
         while (res!=null){
-            Object temp = res.getObjekt();
+            Object temp = res.getValue();
             if (value==null && temp== null )return res;
             if (value.equals(temp))return res;
             res=res.getNext();
@@ -60,7 +60,7 @@ public class MyLinkedList<T> {
     public T remove(int index){
         Node node =find(index);
         if (node!=null){
-            remove((T) node.getObjekt());
+            remove((T) node.getValue());
     }
         else {
             return null;
@@ -86,10 +86,10 @@ public class MyLinkedList<T> {
               node.getNext().setPrev(node.getPrev());
               node.setPrev(null);
               node.setNext(node);
-              node.setObjekt(null);
+              node.setValue(null);
           }
         size--;
-        return (T) node.getObjekt();
+        return (T) node.getValue();
     }
  /*   public T get (int index){
         if (index<0 || index>=size)return null;
@@ -112,7 +112,7 @@ public class MyLinkedList<T> {
         String outputString="";
         Node temp= first;
         while (temp!=null){
-            outputString+=temp.getObjekt()+" " ;
+            outputString+=temp.getValue()+" " ;
             temp = temp.getNext();
         }
         return outputString;
