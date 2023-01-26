@@ -1,4 +1,4 @@
 # myLessonsJava
 myLessonsJavamyLessonsJava
-this is my Java Scool
+this is my Java Scool of Java
 i learning fine
