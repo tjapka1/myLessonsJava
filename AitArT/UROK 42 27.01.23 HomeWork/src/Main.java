@@ -41,9 +41,7 @@ public class Main {
                 " содержащий знаки препинания.";
 
 
-        List<String> strToList = textStringToList(text);
-        System.out.println(strToList);
-
+        stringToCount(text);
 
         List<String> words = new ArrayList<>();
         words.add("da");
@@ -52,29 +50,33 @@ public class Main {
         words.add("ne");
         words.add("da");
         words.add("ja");
-
-        wordsCount(words);
+    }
+    public static void stringToCount(String inStr){
+        List<String> strToList = textStringToList(inStr);
+        Map<String,Long>listToMap=wordsCount(strToList);
 
     }
-
     public static List<String> textStringToList(String inStr) {
         List<String> outList = new ArrayList<>();
         for (String s : inStr.split(" ")) {
             outList.add(s.replace(" ", " "));
         }
-        wordsCount(outList);
         return outList;
     }
-
     public static ArrayList<String> filterWords(List<String> stringList) {
         HashSet<String> outSet = new HashSet<>(stringList);
         return new ArrayList<>(outSet);
     }
 
-    public static void wordsCount(List<String> inList) {
+    public static Map<String, Long> wordsCount(List<String> inList) {
         Map<String, Long> outMap = inList.stream().collect(Collectors.groupingBy
-                (Function.identity(), Collectors.counting()));
-
-        outMap.forEach((k, v )->System.out.println(k +": " + v));
+                                                      (Function.identity(), Collectors.counting()));
+        System.out.println(outMap);
+        return outMap;
     }
+/*public void printMap(Map<String, Long>inMap){
+        for (Map p:inMap) System.out.println(p);
+
+}*/
+
 }

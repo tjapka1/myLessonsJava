@@ -3,7 +3,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MainTest {
     @Test
@@ -37,6 +39,27 @@ public class MainTest {
         result.add("dai");
 
         Assertions.assertEquals(expectedList, result);
+    }
+    @Test
+    @DisplayName("Words count")
+    void wordsCount(){
+
+        List<String> testWords = new ArrayList<>();
+        testWords.add("da");
+        testWords.add("ja");
+        testWords.add("da");
+        testWords.add("ne");
+        testWords.add("da");
+        testWords.add("ja");
+
+        Map<String, Long> expectedMap = Main.wordsCount(testWords);
+        Map<String, Long>result=new HashMap<>();
+        result.put("ne", 1l);
+        result.put("ja", 2l);
+        result.put("da", 3l);
+
+        Assertions.assertEquals(expectedMap, result);
+
     }
 
 
