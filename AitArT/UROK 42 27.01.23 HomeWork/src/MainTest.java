@@ -35,8 +35,8 @@ public class MainTest {
         List<String>expectedList=Main.textStringToList(testString);
         List<String>result=new ArrayList<>();
         result.add("vova");
-        result.add("mne");
         result.add("dai");
+        result.add("mne");
 
         Assertions.assertEquals(expectedList, result);
     }
@@ -61,6 +61,42 @@ public class MainTest {
         Assertions.assertEquals(expectedMap, result);
 
     }
+    @Test
+    @DisplayName("Add Words")
+    void addWords(){
 
+        Map<String, Long> testWords = new HashMap<>();
+        testWords.put("da", 3l);
+        testWords.put("ja", 2l);
+        testWords.put("ne", 1l);
 
+        List<WordsCount> expectedList = Main.addWords(testWords);
+
+        List<WordsCount>result=new ArrayList<>();
+        result.add(new WordsCount("ja", 2l));
+        result.add(new WordsCount("ne", 1l));
+        result.add(new WordsCount("da", 3l));
+
+        Assertions.assertEquals(expectedList, result);
+
+    }
+
+    @Test
+    @DisplayName("get Of Nummber")
+    void getNumOfWords(){
+        List<WordsCount> testWords = new ArrayList<>();
+
+        testWords.add(new WordsCount("ja",3l));
+        testWords.add(new WordsCount("da", 2l));
+        testWords.add(new WordsCount("ne", 1l));
+
+        List<WordsCount> expectedList = Main.getNumOfWords(testWords, 2);
+
+        List<WordsCount>result=new ArrayList<>();
+        result.add(new WordsCount("ja", 3l));
+        result.add(new WordsCount("da", 2l));
+
+        Assertions.assertEquals(expectedList, result);
+
+    }
 }

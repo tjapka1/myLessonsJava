@@ -3,7 +3,7 @@ public class MyLinkedList<T> {
     private Node last=null;
     private int size=0;
     public boolean add(T value){
-        Node newNode = new Node(null, null, value);
+        Node newNode = new Node(null, null, null);
         if(first ==null){
             first = newNode;
         } else {
