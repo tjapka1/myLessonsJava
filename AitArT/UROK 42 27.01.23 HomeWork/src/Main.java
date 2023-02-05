@@ -47,7 +47,7 @@ public class Main {
         words.add("ne");
         words.add("ja");
         words.add("ja");
-//        words.add(null);
+     //  words.add(null);
 
         toCount(words, 2);
     }
@@ -56,7 +56,13 @@ public class Main {
         System.out.println("_________List_______");
         Map<String, Long> listToMap = wordsCount(inList);
         List<WordsCount> addWords = addWords(listToMap);
-        List<WordsCount> wordsOf3 = getNumOfWords(addWords, abNum);
+        List<WordsCount> wordsOf3 = null;
+        try {
+            wordsOf3 = getNumOfWords(addWords, abNum);
+        } catch (NoCountWordsException e) {
+            System.out.println("No Word");
+            //throw new RuntimeException(e);
+        }
         print(wordsOf3);
     }
     public static void toCount(String inStr, long abNum) {
@@ -64,7 +70,12 @@ public class Main {
         List<String> strToList = textStringToList(inStr);
         Map<String, Long> listToMap = wordsCount(strToList);
         List<WordsCount> addWords = addWords(listToMap);
-        List<WordsCount> wordsOf = getNumOfWords(addWords, abNum);
+        List<WordsCount> wordsOf = null;
+        try {
+            wordsOf = getNumOfWords(addWords, abNum);
+        } catch (NoCountWordsException e) {
+           System.out.println("No Word");
+        }
         print(wordsOf);
     }
     public static List<String> textStringToList(String inStr) {
@@ -74,7 +85,7 @@ public class Main {
         }
         return outList;
     }
-    public static List<String> filterWords(List<String> stringList) {
+    public static List<String> filterWords(List<String> stringList) throws NoCountWordsException {
         HashSet<String> outSet = new HashSet<>();
         for (String word:stringList)
             if (word==null){throw new NoCountWordsException("No Word");}
@@ -98,7 +109,7 @@ public class Main {
 
         return outList;
     }
-    public static List<WordsCount> getNumOfWords(List<WordsCount> inList, long abNum) {
+    public static List<WordsCount> getNumOfWords(List<WordsCount> inList, long abNum) throws NullPointerException, NoCountWordsException {
         List<WordsCount> outList = new ArrayList<>();
         for (WordsCount words : inList) {
             if (words.getCount()==0){throw new NoCountWordsException("Null");}
@@ -140,6 +151,19 @@ class WordsCount implements Comparable {
     @Override
     public int compareTo(Object word) {
         return (int) (this.count - count);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        WordsCount that = (WordsCount) o;
+        return count == that.count && Objects.equals(words, that.words);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(words, count);
     }
 
     @Override

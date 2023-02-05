@@ -19,7 +19,12 @@ public class MainTest {
         testList.add("da");
         testList.add("ja");
 
-        List<String> expectedList=Main.filterWords(testList);
+        List<String> expectedList= null;
+        try {
+            expectedList = Main.filterWords(testList);
+        } catch (NoCountWordsException e) {
+            throw new RuntimeException(e);
+        }
         List<String>result=new ArrayList<>();
         result.add("ja");
         result.add("ne");
@@ -82,7 +87,7 @@ public class MainTest {
     }
 
     @Test
-    @DisplayName("get Of Nummber")
+    @DisplayName("get Of Number")
     void getNumOfWords(){
         List<WordsCount> testWords = new ArrayList<>();
 
@@ -90,7 +95,12 @@ public class MainTest {
         testWords.add(new WordsCount("da", 2l));
         testWords.add(new WordsCount("ne", 1l));
 
-        List<WordsCount> expectedList = Main.getNumOfWords(testWords, 2);
+        List<WordsCount> expectedList = null;
+        try {
+            expectedList = Main.getNumOfWords(testWords, 2);
+        } catch (NoCountWordsException e) {
+            throw new RuntimeException(e);
+        }
 
         List<WordsCount>result=new ArrayList<>();
         result.add(new WordsCount("ja", 3l));

@@ -1,6 +1,7 @@
-public class NoCountWordsException extends RuntimeException {
+public class NoCountWordsException extends Exception {
 
     public NoCountWordsException(String message) {
         super(message);
+        System.out.println("No Word");
     }
 }
