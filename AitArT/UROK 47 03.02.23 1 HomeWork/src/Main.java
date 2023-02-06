@@ -90,7 +90,7 @@ list1{s1,s2,s3,s4,s5},  list2{s2,s4,s5,s1,s3} ->false
         return ouList;
     }
     private static Map<Student, Integer> sortMap(List<Student> inList) {
-        Map<Student, Integer> ouMap=new HashMap<>();
+        Map<Student, Integer> ouMap=new TreeMap<>(new SortByFalseDayComp().thenComparing(new SortByNameComp()));
         for (Student s: inList){
             ouMap.put(s, s.getLesson().get(0).getFalseDays());
         }
@@ -111,5 +111,7 @@ list1{s1,s2,s3,s4,s5},  list2{s2,s4,s5,s1,s3} ->false
             System.out.println(student);
         }
     }
+
+    
 
 }
