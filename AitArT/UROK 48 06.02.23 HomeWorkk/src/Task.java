@@ -1,4 +1,4 @@
-public class Task implements Comparable{
+public class Task {
     private  int num;
     private String title;
     private String priority;
@@ -29,7 +29,7 @@ public class Task implements Comparable{
         return priority;
     }
 
-    public void setPriority(String priority) {
+    public void getPriority(String priority) {
         this.priority = priority;
     }
 
