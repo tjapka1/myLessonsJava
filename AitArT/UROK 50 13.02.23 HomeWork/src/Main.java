@@ -11,7 +11,7 @@ public class Main {
                         new Address("45711", "Datteln", "Jahnstr", "35"))
         );
 
-        System.out.println(funkSwitch(personList, 4));
+        System.out.println(funkSwitch(personList, 2));
 
     }
     public static List<String> funkSwitch(List<Person>inList, int choise){
