@@ -21,13 +21,14 @@ public class Main {
         print(byAmout);
 
 
-
+        System.out.println("Wwaadfksiddlжвыфasфяlz.zdg");
     }
     public static List<Transaction> sort(List<Transaction> inList, Comparator<Transaction>comparator){
         List<Transaction>ouList=new ArrayList<>(inList);
         ouList.sort(comparator);
         return ouList;
     }
+
     public static void print(List<Transaction>inList){
           inList.forEach((Transaction t)-> System.out.println(t));
 
