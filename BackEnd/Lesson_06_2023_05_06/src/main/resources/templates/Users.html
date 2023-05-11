@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+<h1>Hello User</h1>
+<table>
+    <tbody>
+        <tr th:each="user: ${users}">
+            <th th:text ="${user.id}"></th>
+            <td th:text = "${user.name}"></td>
+            <td th:text = "${user.city}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

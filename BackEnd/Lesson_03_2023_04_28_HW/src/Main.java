@@ -1,7 +1,9 @@
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
     /*
@@ -25,16 +27,16 @@ goalsTeam1 – количество голов забитых командой T
     public static void main(String[] args) {
 
         List <Account> accounts=List.of(
-                new Account(new Person("Wasja1"), "DE01", 10),
-                new Account(new Person("Wasja2"), "DE02", 20),
-                new Account(new Person("Wasja2"), "DE02", 20),
-                new Account(new Person("Wasja3"), "DE03", 30),
-                new Account(new Person("Wasja4"), "DE04", 40),
-                new Account(new Person("Wasja5"), "DE05", 50)
+                new Account(new Person("p1"), "DE01", 10),
+                new Account(new Person("p2"), "DE02", 20),
+                new Account(new Person("p2"), "DE02", 20),
+                new Account(new Person("p3"), "DE03", 30),
+                new Account(new Person("p4"), "DE04", 40),
+                new Account(new Person("p5"), "DE05", 50)
         );
 
-        Map<Person, Account> nameAcc= accounts.stream()
-                .collect(Collectors.toMap(Account::getPerson, account -> account));
+        Map<Person, List <Account>> nameAcc= accounts.stream()
+                .collect(Collectors.groupingBy(account -> account.getPerson()));
 
         System.out.println(nameAcc);
         System.out.println("**************************");
@@ -53,11 +55,11 @@ goalsTeam1 – количество голов забитых командой T
                 new Person("Wasja5", 50)
         );
 
-//
-//        Map <Person, Integer> personCount = people.stream()
-//                        .collect(Collectors.groupingBy(Person::getName, Collectors.counting()));
 
-//        System.out.println(personCount);
+        Map <Person, Long> personCount = people.stream()
+                        .collect(Collectors.groupingBy(s -> s, Collectors.counting()));
+
+        System.out.println(personCount);
         System.out.println("**************************");
 
         List<GameInfo> gameInfos=List.of(
@@ -69,10 +71,15 @@ goalsTeam1 – количество голов забитых командой T
         );
         System.out.println(gameInfos);
 
-//        List<GameTeamResult> teamTabelle= gameInfos.stream()
-//                .collect(Collectors.toList());
-//
-//
-//        System.out.println(teamTabelle);
+        Map<String, Integer>  team1GoalsMap = gameInfos.stream()
+                .collect(Collectors.toMap(GameInfo::getTeam1, GameInfo::getGoalsTeam1, Integer::sum));
+        Map<String, Integer> team2GoalsMap = gameInfos.stream()
+                .collect(Collectors.toMap(GameInfo::getTeam2, GameInfo::getGoalsTeam2, Integer::sum));
+
+        Map<String, Integer> allTeamsGoals = new HashMap<>();
+        allTeamsGoals.putAll(team1GoalsMap);
+        allTeamsGoals.putAll(team2GoalsMap);
+
+        System.out.println(allTeamsGoals);
     }
 }
