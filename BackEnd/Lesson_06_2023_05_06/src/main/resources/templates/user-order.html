@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 th:text="'User # ' + ${user.getName()} + ' id: ' + ${user.getId()}"></h1>
+<table>
+    <tr th:each="order: ${orders}">
+        <td th:href="${order.getOrderID()}"></td>
+        <td th:href="${order.getTitle()}"></td>
+    </tr>
+</table>
+</body>
+</html>

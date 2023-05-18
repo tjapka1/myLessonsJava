@@ -5,15 +5,14 @@ import java.util.Objects;
 public class Order {
     private static int count=0;
     private int orderID;
-    private int userID;
-    private int productID;
-    private int quantity;
+    private User user;
 
-    public Order(int userId, int productID, int quantity) {
+    private String productName;
+
+    public Order(User user, String productName) {
         this.orderID = ++count;
-        this.userID = userId;
-        this.productID=productID;
-        this.quantity=quantity;
+        this.user = user;
+        this.productName = productName;
     }
 
     @Override
@@ -21,27 +20,27 @@ public class Order {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Order order = (Order) o;
-        return orderID == order.orderID && userID == order.userID && productID == order.productID;
+        return orderID == order.orderID && Objects.equals(user, order.user) && Objects.equals(productName, order.productName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(orderID, userID, productID);
+        return Objects.hash(orderID, user, productName);
+    }
+
+    public static int getCount() {
+        return count;
     }
 
     public int getOrderID() {
         return orderID;
     }
 
-    public int getUserID() {
-        return userID;
+    public User getUser() {
+        return user;
     }
 
-    public int getProductID() {
-        return productID;
-    }
-
-    public int getQuantity() {
-        return quantity;
+    public String getProductName() {
+        return productName;
     }
 }

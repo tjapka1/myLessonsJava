@@ -8,13 +8,20 @@ public class User {
     private String name;
     private String city;
 
-    public User(String name, String city) {
-        this.id=++count;
-        this.name = name;
-        this.city = city;
-    }
 
     public User() {
+        this.id=++count;
+    }
+
+    public User(String name) {
+        this();
+        this.name = name;
+    }
+
+    public User(String name, String city) {
+        this();
+        this.name = name;
+        this.city = city;
     }
 
     @Override
@@ -28,7 +35,10 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(id, name, city);
+    }
 
+    public static int getCount() {
+        return count;
     }
 
     public int getId() {
@@ -39,15 +49,7 @@ public class User {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getCity() {
         return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
     }
 }
