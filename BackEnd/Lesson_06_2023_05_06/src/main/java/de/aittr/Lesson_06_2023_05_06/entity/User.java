@@ -37,9 +37,6 @@ public class User {
         return Objects.hash(id, name, city);
     }
 
-    public static int getCount() {
-        return count;
-    }
 
     public int getId() {
         return id;
