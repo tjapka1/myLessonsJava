@@ -28,6 +28,14 @@ public class Order {
         return Objects.hash(orderID, user, productName);
     }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
     public static int getCount() {
         return count;
     }
@@ -43,4 +51,5 @@ public class Order {
     public String getProductName() {
         return productName;
     }
+
 }

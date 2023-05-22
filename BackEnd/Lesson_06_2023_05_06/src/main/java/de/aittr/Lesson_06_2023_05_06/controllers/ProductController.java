@@ -4,11 +4,12 @@ import de.aittr.Lesson_06_2023_05_06.dao.ProductDAO;
 import de.aittr.Lesson_06_2023_05_06.dao.UsersDAO;
 import de.aittr.Lesson_06_2023_05_06.entity.Product;
 import de.aittr.Lesson_06_2023_05_06.entity.User;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@Controller
 public class ProductController {
     private ProductDAO productDAO = new ProductDAO();
     private List<Product> products = productDAO.getProducts();

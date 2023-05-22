@@ -37,6 +37,13 @@ public class User {
         return Objects.hash(id, name, city);
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 
     public int getId() {
         return id;
