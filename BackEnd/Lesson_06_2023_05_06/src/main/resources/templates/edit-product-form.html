@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link th:href="@{/css/index.css}" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit product</title>
+</head>
+<body>
+  <h1>Edit product</h1>
+  <form th:action="@{/products/{id}(id=${product.id})}"
+        th:method="PUT"
+        th:object="${product}"
+        autocomplete="off">
+
+
+    <label> название продукта  </label>
+    <input type="text"
+           name="title"
+           th:field="${product.title}"
+            />
+
+    <label> Цена продукта  </label>
+    <input type="text"
+           name="price"
+           th:field="${product.price}"
+           />
+
+    <label> Описание продукта  </label>
+    <input type="text"
+           name="description"
+           th:field="${product.description}"
+           />
+
+    <button type="submit"> Save </button>
+
+
+  </form>
+</body>
+</html>

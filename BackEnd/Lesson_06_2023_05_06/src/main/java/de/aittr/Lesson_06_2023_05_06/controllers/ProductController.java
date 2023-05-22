@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 public class ProductController {
-    private ProductDAO productDAO =new ProductDAO();
+    private ProductDAO productDAO = new ProductDAO();
     private List<Product> products = productDAO.getProducts();
 
     @GetMapping(value = "/products")
@@ -29,38 +29,37 @@ public class ProductController {
 
 
 
-    @DeleteMapping(value = "/users/{id}")
-    public String removeUser(@PathVariable int id){
-        usersDAO.remove(id);
-        System.out.println("Remove user"+ id);
-        return "redirect:/users";
+    @DeleteMapping(value = "/products/{id}")
+    public String removeProduct(@PathVariable int id){
+        productDAO.remove(id);
+        System.out.println("Remove product"+ id);
+        return "redirect:/products";
     }
 
-    @GetMapping(value = "/users/new")
-    public String createUserForm(Model model){
-        User user = new User();
-        model.addAttribute("user",user);
-        return "create-user-form";
+    @GetMapping(value = "/products/new")
+    public String createProductForm(Model model){
+        Product product=new Product();
+        model.addAttribute("product",product);
+        return "create-product-form";
     }
 
-    @PostMapping(value = "/users")
-    public String addUser( @ModelAttribute("user")  User user){
-        usersDAO.add(user);
-        return "redirect:/users";
+    @PostMapping(value = "/products")
+    public String addProduct( @ModelAttribute("product")  Product product){
+        productDAO.add(product);
+        return "redirect:/products";
     }
 
-    @GetMapping(value = "/users/edit/{id}")
-    public String editUserForm(@PathVariable  int id, Model model){
-
-        model.addAttribute("user", usersDAO.get(id));
-        return "edit-user-form";
+    @GetMapping(value = "/products/edit/{id}")
+    public String editProductForm(@PathVariable  int id, Model model){
+        model.addAttribute("product", productDAO.get(id));
+        return "edit-product-form";
     }
 
-    @PutMapping(value = "/users/{id}")
-    public String editUser(@ModelAttribute("user") User user, @PathVariable int id){
-        System.out.println("Edit user");
-        usersDAO.edit(user,id);
-        return "redirect:/users";
+    @PutMapping(value = "/products/{id}")
+    public String editProduct(@ModelAttribute("product") Product product, @PathVariable int id){
+        System.out.println("Edit product");
+        productDAO.edit(product, id);
+        return "redirect:/products";
     }
 
 }
