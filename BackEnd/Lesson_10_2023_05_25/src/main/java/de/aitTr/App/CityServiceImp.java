@@ -9,9 +9,9 @@ import java.util.List;
 @Service
 public class CityServiceImp implements CityService{
 
-    @Autowired
-    CityRepository repository;
 
+    CityRepository repository;
+    @Autowired
     public CityServiceImp(CityRepository repository) {
         this.repository = repository;
     }
@@ -34,7 +34,7 @@ public class CityServiceImp implements CityService{
         List<City> cities = new ArrayList<>();
         repository.findAll().forEach(c->cities.add(c));
         City city= City.builder()
-                //.name("Moscow")
+                .name("Moscow")
                 .population(1888888)
                 .country("RF").build();
         return cities;
@@ -46,7 +46,7 @@ public class CityServiceImp implements CityService{
     }
 
     @Override
-    public City getCity(int id) {
+    public City getCity(long id) {
         return null; //cities.stream().filter(a->a.getId()==id).findAny().get();
     }
 

@@ -6,7 +6,6 @@ import lombok.*;
 
 @Setter
 @Getter
-@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 @Builder
@@ -27,12 +26,5 @@ public class Auto {
     @Schema(description = "BauYear", type = "string")
     @Column(name = "Bauyaer")
     private int year;
-
-
-
-    public Auto(String brand, String plate, int year) {
-        this.brand = brand;
-        this.plate = plate;
-        this.year = year;
-    }
+    public Auto() {}
 }

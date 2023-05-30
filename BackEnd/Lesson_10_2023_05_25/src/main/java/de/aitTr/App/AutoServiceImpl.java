@@ -29,9 +29,13 @@ public class AutoServiceImpl implements AutoService{
     */
     @Override
     public List<Auto> getAllAutos(String brand) {
-        List<Auto> autos=new ArrayList<>();
-        repository.findAll().forEach(autos::add);
+        List<Auto>autos=new ArrayList<>();
+        repository.findAll().forEach(a->autos.add(a));
         return autos;
+    }
+    @Override
+    public List<Auto> getAllAutos() {
+        return null;
     }
 
     @Override
@@ -41,7 +45,8 @@ public class AutoServiceImpl implements AutoService{
 
     @Override
     public Auto addAuto(Auto auto) {
-        return null;
+        repository.save(auto);
+        return auto;
     }
 
     @Override
@@ -54,8 +59,5 @@ public class AutoServiceImpl implements AutoService{
         return null;
     }
 
-    @Override
-    public List<Auto> getAllAutos() {
-        return null;
-    }
+
 }

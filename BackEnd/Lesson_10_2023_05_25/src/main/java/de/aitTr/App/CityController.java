@@ -27,7 +27,7 @@ public class CityController {
     }
     @GetMapping("/{id}")  // "/cities"
     @Operation(description = "Получить данные о городе")
-    public City getCity (@PathVariable int id){
+    public City getCity (@PathVariable long id){
         return service.getCity(id);
     }
     @PostMapping("")

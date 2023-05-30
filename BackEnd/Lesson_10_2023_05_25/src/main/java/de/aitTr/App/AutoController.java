@@ -16,28 +16,27 @@ public class AutoController {
     public AutoController(AutoService service) {
         this.service = service;
     }
-
-    @GetMapping("")  // "/autos"
+    @GetMapping("")
     public List<Auto> listAuto (@RequestParam(name = "brand", required = false,defaultValue = "all") String brand ) {
-
         if (brand.equals("all")) {
             return service.getAllAutos();
         } else {
             return service.getAllAutos(brand);
         }
     }
-    @PostMapping
+    @GetMapping("/{id}")
+    @Operation(description = "Information of Auto")
+    public Auto getAuto (@PathVariable long id){
+        return service.getAuto(id);
+    }
+    @PostMapping("")
     @ResponseStatus(code = HttpStatus.CREATED)
-    public Auto createAuto(@RequestParam Auto auto){
+    public Auto createAuto(@RequestBody Auto auto){
         service.addAuto(auto);
         return auto;
     }
-    @GetMapping("/{id}")
-    @Operation(description = "Information of Auto")
-    public Auto getAuto (@PathVariable int id){
-        return service.getAuto(id);
-    }
-@DeleteMapping
+
+@DeleteMapping("")
     public Auto deleteAuto(@RequestParam(name = "brand", required = true, defaultValue = "all") String brand){
         return null;
 }

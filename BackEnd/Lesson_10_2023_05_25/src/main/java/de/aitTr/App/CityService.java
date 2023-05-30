@@ -7,7 +7,7 @@ public interface CityService {
     List<City> getAllCities();
     List<City> getAllCities(String country);
 
-    City getCity(int id);
+    City getCity(long id);
 
     City addCity(City city);
 
