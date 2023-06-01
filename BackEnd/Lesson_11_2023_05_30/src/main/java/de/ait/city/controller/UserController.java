@@ -24,11 +24,15 @@ public class UserController {
     @PostMapping("")
     @ResponseStatus(code = HttpStatus.CREATED)
     public UserResponseDTO creatUser(@RequestBody UserRequestDTO user){return service.addUser(user);}
-    @PostMapping("")
-    public UserResponseDTO updateUser(@RequestBody UserRequestDTO user){return service.updateUser(user);}
-    @DeleteMapping("")
-    public User deleteUser(@RequestParam(name = "user",required = true,defaultValue = "all")String name){
-        return null;
+
+    @PutMapping("/{id}")
+    public UserResponseDTO updateUser(@RequestParam Long id, @RequestBody UserRequestDTO user){return service.updateUser(id, user);}
+
+
+    @DeleteMapping("/{id}")
+    public UserResponseDTO
+    deleteUser(@RequestParam(name = "id",required = true,defaultValue = "all")Long id){
+        return service.removeUser(id);
     }
 
 }

@@ -6,6 +6,7 @@ import de.ait.city.entity.City;
 import de.ait.city.entity.User;
 import de.ait.city.reposity.UserRepository;
 import lombok.AllArgsConstructor;
+import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.List;
 @Service
 public class UserServiceImp {
     private UserRepository repository;
+    private ModelMapper mapper;
 
     public List<UserResponseDTO> getAllUsers(){
         List<UserResponseDTO>list=new ArrayList<>();
@@ -28,16 +30,18 @@ public class UserServiceImp {
         return list;
     }
     public UserResponseDTO addUser(UserRequestDTO user){
-        User u = new User(user.getName(), user.getAge());
-        repository.save(u);
-        UserResponseDTO userResponseDTO = new UserResponseDTO(u.getId(), u.getName(), u.getAge());
-        return userResponseDTO;
+         User res = repository.save(mapper.map(user, User.class));
+         return mapper.map(res, UserResponseDTO.class);
     }
-    public UserResponseDTO updateUser(UserRequestDTO user){
-        User u = new User(user.getName(), user.getAge());
-        repository.save(u);
-        UserResponseDTO userResponseDTO = new UserResponseDTO(u.getId(), u.getName(), u.getAge());
-        return userResponseDTO;
+    public UserResponseDTO updateUser(Long id, UserRequestDTO user){
+        User entity = mapper.map(user, User.class);
+        entity.setId(id);
+        User res = repository.save(entity);
+        return mapper.map(res, UserResponseDTO.class);
+    }
+    public UserResponseDTO removeUser(Long id){
+        repository.deleteById(id);
+        return null;
     }
 
 }
