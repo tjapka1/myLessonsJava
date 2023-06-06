@@ -3,8 +3,9 @@ package de.aittr.bd1.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @Table(name="client")
@@ -22,13 +23,13 @@ public class Client {
     @Column(name="name")
     private String name;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "Account_id", referencedColumnName = "id")
-    private Account account;
+    @OneToMany(mappedBy = "client")
+    //@JoinColumn(name = "Client_id", referencedColumnName = "id")
+    private List<Account> account;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "adress_id", referencedColumnName = "id")
-    private Adress adress;
+    @OneToOne(mappedBy = "client")
+    //@JoinColumn(name = "address_id", referencedColumnName = "id")
+    private Address address;
     
 
 }

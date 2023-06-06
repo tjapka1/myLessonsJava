@@ -6,11 +6,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "adress")
+@Table(name = "address")
 @NoArgsConstructor
 @Getter
 @Setter
-public class Adress {
+public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", unique = true)
@@ -25,6 +25,7 @@ public class Adress {
     @Column(name = "city")
     private String city;
 
-    @OneToOne(mappedBy = "adress", cascade = CascadeType.ALL)
+    @OneToOne
+    @JoinColumn(name = "client_id")
     private Client client;
 }

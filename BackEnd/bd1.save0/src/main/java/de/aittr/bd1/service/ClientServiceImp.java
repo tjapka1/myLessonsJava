@@ -46,6 +46,7 @@ public class ClientServiceImp implements ClientService{
         entity.setName(client.getName());
         entity.setAccount(account);
         */
+
         return mapper.map(clientRepository.save(entity), ClientResponseDTO.class);
     }
 

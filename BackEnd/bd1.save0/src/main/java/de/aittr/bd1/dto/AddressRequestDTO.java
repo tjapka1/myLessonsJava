@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class AdressRequestDTO {
+public class AddressRequestDTO {
     private String street;
     private int houseNumber;
     private String city;

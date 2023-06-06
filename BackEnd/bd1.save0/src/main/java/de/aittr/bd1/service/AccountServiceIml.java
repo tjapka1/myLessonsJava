@@ -18,6 +18,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class AccountServiceIml implements AccountService{
     private final JpaRepository<Account, Long> accountRepository;
+    private final JpaRepository<Client, Long> clientRepository;
     private final ModelMapper mapper;
 
     @Override
@@ -53,5 +54,17 @@ public class AccountServiceIml implements AccountService{
     @Override
     public void deleteAccount(Long id) {
         accountRepository.deleteById(id);
+    }
+
+    @Override
+    public AccountResponseDTO addAccount(AccountRequestDTO account, Long clientId) {
+        Account entity = mapper.map(account, Account.class);
+        Client client = clientRepository.findById(clientId).get();
+
+        entity.setClient(client);
+        client.getAccount().add(entity);
+        Account savedAccount = accountRepository.save(entity);
+        AccountResponseDTO res = mapper.map(savedAccount, AccountResponseDTO.class);
+        return res;
     }
 }
