@@ -11,5 +11,6 @@ public class ClientResponseDTO {
     private Long id;
     private String name;
     private List<AccountResponseDTO> accounts;
-    private AddressResponseDTO address;
+    private List<AddressResponseDTO> addresses;
 }
+

@@ -26,13 +26,19 @@ public class AccountController {
     public AccountResponseDTO getAccount(@PathVariable(name = "id") Long id){
         return service.getAccount(id);
     }
-
+/*
     @PostMapping("")
     @ResponseStatus(code= HttpStatus.CREATED)
     public AccountResponseDTO addAccount(@RequestBody AccountRequestDTO account){
         return service.addAccount(account);
     }
-
+*/
+    // POST accounts/2/clients/1     client(id 1) added to acc(id 2)
+    @PostMapping(value="/{accountId}/clients/{clientId}")
+    public void addClientToAccount(@PathVariable(name="accountId") Long accountId,
+                                   @PathVariable(name="clientId") Long clientId){
+        service.addClientToAccount(accountId, clientId);
+    }
     @PutMapping("/{id}")
     public AccountResponseDTO updateAccount(@PathVariable(name="id") Long id, @RequestBody AccountRequestDTO client){
         return service.updateAccount(id,client);

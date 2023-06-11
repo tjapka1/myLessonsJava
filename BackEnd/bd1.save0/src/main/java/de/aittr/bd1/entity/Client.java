@@ -23,13 +23,13 @@ public class Client {
     @Column(name="name")
     private String name;
 
-    @OneToMany(mappedBy = "client")
-    //@JoinColumn(name = "Client_id", referencedColumnName = "id")
-    private List<Account> account;
+    @ManyToMany(mappedBy = "clients")
+    //@JoinColumn(name = "account_id", referencedColumnName = "id")
+    private List<Account> accounts;
 
-    @OneToOne(mappedBy = "client")
+    @ManyToMany(mappedBy = "clients")
     //@JoinColumn(name = "address_id", referencedColumnName = "id")
-    private Address address;
+    private List<Address> addresses;
     
 
 }

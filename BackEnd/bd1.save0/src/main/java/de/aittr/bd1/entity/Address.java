@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Table(name = "address")
 @NoArgsConstructor
@@ -25,7 +27,11 @@ public class Address {
     @Column(name = "city")
     private String city;
 
-    @OneToOne
-    @JoinColumn(name = "client_id")
-    private Client client;
+    @ManyToMany
+    @JoinTable(
+            name = ("client_address"),
+            joinColumns = @JoinColumn(name = "address_id"),
+            inverseJoinColumns = @JoinColumn(name = "client_id")
+    )
+    private List<Client> clients;
 }

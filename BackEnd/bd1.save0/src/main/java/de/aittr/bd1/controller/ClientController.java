@@ -41,12 +41,23 @@ public class ClientController {
         AccountResponseDTO accountResponseDTO = accountService.addAccount(account, clientId);
         return accountResponseDTO;
     }
+
+    @GetMapping("/{id}/accounts")
+    public List<AccountResponseDTO> getAccountsByClient(@PathVariable(name = "id") Long clientId){
+        return getAccountsByClient(clientId);
+    }
+
     @PostMapping("/{id}/address")
     @ResponseStatus(code = HttpStatus.CREATED)
     public AddressResponseDTO addAddress(@PathVariable(name = "id") Long clientId, @RequestBody AddressRequestDTO address){
        AddressResponseDTO addressResponseDTO = addressService.addAddress(address, clientId);
         return addressResponseDTO;
     }
+    @GetMapping("/{id}/address")
+    public List<AddressResponseDTO> getAddressByClient(@PathVariable(name = "id") Long clientId){
+        return addressService.getAddressByClientImp(clientId);
+    }
+
     @PutMapping("/{id}")
     public ClientResponseDTO updateClient(@PathVariable(name="id") Long id, @RequestBody ClientRequestDTO client){
         return clientService.updateClient(id,client);

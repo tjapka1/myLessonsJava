@@ -12,4 +12,7 @@ public interface AddressService {
     AddressResponseDTO updateAddress(Long id, AddressRequestDTO address);
     void deleteAddress(Long id);
     AddressResponseDTO addAddress(AddressRequestDTO addressRequestDTO, Long clientId);
+    List<AddressResponseDTO> getAddressByClientImp(Long id);
+
+    void addClientToAddresse(Long addressId, Long clientId);
 }

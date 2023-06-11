@@ -39,6 +39,10 @@ public class AddressController {
         service.deleteAddress(id);
     }
 
-
+    @PostMapping(value="/{addressId}/clients/{clientId}")
+    public void addClientToAccount(@PathVariable(name="addressId") Long addressId,
+                                   @PathVariable(name="clientId") Long clientId) {
+        service.addClientToAddresse(addressId, clientId);
+    }
 
 }

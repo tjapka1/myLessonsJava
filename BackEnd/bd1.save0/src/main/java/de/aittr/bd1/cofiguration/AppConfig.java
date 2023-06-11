@@ -1,6 +1,9 @@
 package de.aittr.bd1.cofiguration;
 
+import de.aittr.bd1.dto.AccountRequestDTO;
+import de.aittr.bd1.dto.CardRequestDTO;
 import de.aittr.bd1.dto.ClientRequestDTO;
+import de.aittr.bd1.entity.Card;
 import de.aittr.bd1.entity.Client;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeMap;
@@ -20,7 +23,14 @@ public class AppConfig {
            //client.getAddress().setClient(client);
            return client;
         });
-
+/*
+        TypeMap<AccountRequestDTO, Card> cardToEntity = mapper.createTypeMap(AccountRequestDTO.class, Card.class);
+        cardToEntity.setPostConverter(d->{
+            Card card = d.getDestination();
+            card.getAccount().setCard(card);
+            return card;
+        });
+*/
         return mapper;
     }
 }
