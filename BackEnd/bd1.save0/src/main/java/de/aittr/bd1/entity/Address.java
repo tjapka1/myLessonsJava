@@ -18,6 +18,9 @@ public class Address {
     @Column(name = "id", unique = true)
     private Long id;
 
+    @Column(name = "addressType")
+    private AddressType addressType;
+
     @Column(name = "street")
     private String street;
 
