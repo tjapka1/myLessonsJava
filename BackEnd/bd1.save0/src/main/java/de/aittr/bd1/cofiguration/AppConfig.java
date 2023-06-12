@@ -23,14 +23,8 @@ public class AppConfig {
            //client.getAddress().setClient(client);
            return client;
         });
-/*
-        TypeMap<AccountRequestDTO, Card> cardToEntity = mapper.createTypeMap(AccountRequestDTO.class, Card.class);
-        cardToEntity.setPostConverter(d->{
-            Card card = d.getDestination();
-            card.getAccount().setCard(card);
-            return card;
-        });
-*/
+        TypeMap<CardRequestDTO, Card> cardTypeMap= mapper.createTypeMap(CardRequestDTO.class, Card.class);
+        cardTypeMap.addMappings(m->m.skip(Card::setId));
         return mapper;
     }
 }

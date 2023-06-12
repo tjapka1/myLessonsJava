@@ -19,16 +19,18 @@ public class GetAllContacs {
 
     @Test
     public void getAllClientsSuccess() throws IOException {
-        Request request = (new Request.Builder()).url("http://localhost:8080/clients/").get().build();
+        Request request = (new Request.Builder()).url("http://localhost:8080/clients").get().build();
         Response response = this.client.newCall(request).execute();
-
+        System.out.println(response);
         //Assert.assertTrue(response.isSuccessful());
 
         AllClientsDTO allClientsDTO =this.gson.fromJson(response.body().string(), AllClientsDTO.class);
+        System.out.println(allClientsDTO);
         List<ClientResponseDTO> clients = allClientsDTO.getClients();
 
         for (ClientResponseDTO client : clients) {
             System.out.println(client.getId());
+            //System.out.println(client.getAccounts().get(1).);
             //PrintStream var10000 = System.out;
             String var10001 = client.getName();
             //var10000.println(var10001);

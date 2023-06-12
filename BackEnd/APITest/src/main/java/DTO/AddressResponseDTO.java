@@ -1,14 +1,15 @@
 package DTO;
 
-import lombok.*;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.Builder;
 
-@Setter
-@Getter
-@ToString
 @Builder
+@Data
 public class AddressResponseDTO {
     private Long id;
+    private String addressType;
     private String street;
     private int houseNumber;
     private String city;

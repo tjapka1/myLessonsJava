@@ -1,14 +1,16 @@
 package DTO;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
-@Getter
-@Setter
-@ToString
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
 @Builder
 public class ClientRequestDTO {
-    private String  name;
+    private String clientStatus;
+    private String name;
+
+    //private AccountRequestDTO account;
+    //private AddressRequestDTO address;
 }

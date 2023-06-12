@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 public class AccountRequestDTO {
     private String iban;
     private AccountType accountType;
-    private CardRequestDTO cardRequestDTO;
+    //private CardRequestDTO cardRequestDTO;
 
 }

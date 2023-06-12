@@ -23,6 +23,10 @@ public class Client {
     @Column(name="name")
     private String name;
 
+    @Convert(converter = ClientStatusConverter.class)
+    @Column(name = "clientStatus")
+    private ClientStatus clientStatus;
+
     @ManyToMany(mappedBy = "clients")
     //@JoinColumn(name = "account_id", referencedColumnName = "id")
     private List<Account> accounts;

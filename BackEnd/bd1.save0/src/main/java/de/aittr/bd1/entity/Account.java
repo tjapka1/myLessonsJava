@@ -21,6 +21,7 @@ public class Account {
 
     @Column(name="iban")
     private String iban;
+    @Convert(converter = AccountTypeConverter.class)
     @Column(name = "accountType")
     private AccountType accountType;
 
@@ -36,8 +37,5 @@ public class Account {
     )
     //@JoinColumn(name = "client_id")
     private List<Client> clients;
-    @OneToOne
-    @JoinColumn(name = "card_id", referencedColumnName = "id")
-    private Card card;
 
 }

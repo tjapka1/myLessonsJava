@@ -7,7 +7,7 @@ import jakarta.persistence.Converter;
 public class ClientStatusConverter implements AttributeConverter<ClientStatus, Integer> {
     @Override
     public Integer convertToDatabaseColumn(ClientStatus attribute) {
-        return attribute == null ? null : attribute.getCardTypeId();
+        return attribute == null ? null : attribute.getClientStatus();
     }
 
     @Override

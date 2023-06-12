@@ -22,8 +22,10 @@ public class Card {
     private Long id;
     @Column(name = "number")
     private String number;
-    @OneToOne(mappedBy = "card", cascade = CascadeType.ALL)
+    @ManyToOne()
+    @JoinColumn(name = "account_Id")
     private Account account;
+    @Convert(converter = CardTypeConverter.class)
     @Column(name = "cardType")
     private CardType cardType;
 

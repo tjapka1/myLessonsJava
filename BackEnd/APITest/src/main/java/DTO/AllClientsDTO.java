@@ -1,15 +1,20 @@
 package DTO;
 
+import lombok.Builder;
+import lombok.Data;
+
 import java.util.List;
 
 
-
+@Data
+//@Builder
 public class AllClientsDTO {
     private List<ClientResponseDTO> clients;
 
     public AllClientsDTO(List<ClientResponseDTO> clients) {
         this.clients = clients;
     }
+    public static AllClientsDTOBuilder builder(){return new AllClientsDTOBuilder();}
 
     public List<ClientResponseDTO> getClients() {
         return clients;
@@ -24,6 +29,7 @@ public class AllClientsDTO {
         return "Cients=" +" " + this.clients;
     }
 
+    @Data
     public static class AllClientsDTOBuilder {
         private List<ClientResponseDTO> clients;
 

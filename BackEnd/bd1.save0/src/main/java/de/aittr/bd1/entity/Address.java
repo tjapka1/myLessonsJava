@@ -18,6 +18,7 @@ public class Address {
     @Column(name = "id", unique = true)
     private Long id;
 
+   // @Convert(converter = AddressType.class)
     @Column(name = "addressType")
     private AddressType addressType;
 

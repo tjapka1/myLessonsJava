@@ -1,14 +1,16 @@
 package DTO;
 
-import lombok.*;
 
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Setter
-@Getter
-@ToString
+@Data
 @Builder
 public class AccountResponseDTO {
     private Long id;
     private String iban;
+    private String accountType;
+    //private CardResponseDTO cardResponseDTO;
 
 }

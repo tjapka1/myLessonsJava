@@ -10,6 +10,6 @@ public class AccountResponseDTO {
     private Long id;
     private String iban;
     private AccountType accountType;
-    private CardResponseDTO cardResponseDTO;
+    //private CardResponseDTO cardResponseDTO;
 
 }

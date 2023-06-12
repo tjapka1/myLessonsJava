@@ -10,10 +10,10 @@ import java.util.List;
 public interface AccountService {
     List<AccountResponseDTO> getList();
     AccountResponseDTO getAccount(Long id);
+    AccountResponseDTO addAccount(AccountRequestDTO account);
     AccountResponseDTO addAccount(AccountRequestDTO account, Long clientId);
     AccountResponseDTO updateAccount(Long id, AccountRequestDTO account);
     void deleteAccount(Long id);
-   // AccountResponseDTO addAccount(AccountRequestDTO account, Long clientId);
 
    // AccountResponseDTO addAccount(AccountRequestDTO account, Long clientId);
 

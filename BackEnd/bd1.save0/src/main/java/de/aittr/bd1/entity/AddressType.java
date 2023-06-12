@@ -20,10 +20,11 @@ public enum AddressType {
     public static AddressType findByTypeID(Integer typeId){
         if (typeId==null){return null;}
         return Arrays.stream(AddressType.values())
-                .filter(a->a.addressTypeId.equals(typeId))
+                .filter(a->a.getAddressTypeId().equals(typeId))
                 .findFirst()
                 .orElse(null);
     }
+    /*
     @JsonCreator
     public static AddressType findByExternalId(String typeId){
         if (typeId == null) {return null;}
@@ -32,4 +33,6 @@ public enum AddressType {
                 .findFirst()
                 .orElse(null);
     }
+    */
+
 }

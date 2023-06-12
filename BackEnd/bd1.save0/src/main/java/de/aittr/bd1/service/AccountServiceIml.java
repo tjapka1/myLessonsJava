@@ -22,9 +22,7 @@ import java.util.stream.Collectors;
 public class AccountServiceIml implements AccountService{
     private final JpaRepository<Account, Long> accountRepository;
     private final JpaRepository<Client, Long> clientRepository;
-    private final CardRepository cardRepository;
     private final ModelMapper mapper;
-
     @Override
     public List<AccountResponseDTO> getList() {
         List<Account> accounts = accountRepository.findAll();
@@ -37,18 +35,17 @@ public class AccountServiceIml implements AccountService{
     public AccountResponseDTO getAccount(Long id) {
         return mapper.map(accountRepository.findById(id), AccountResponseDTO.class);
     }
-/*
+
        @Override
-        public AccountResponseDTO addAccount(AccountRequestDTO account, Long clientId) {
-          // Account entity = mapper.map(account, Account.class);
-            //return mapper.map(accountRepository.save(entity),AccountResponseDTO.class);
-            return null;
+        public AccountResponseDTO addAccount(AccountRequestDTO account) {
+           Account entity = mapper.map(account, Account.class);
+           return mapper.map(accountRepository.save(entity),AccountResponseDTO.class);
+         //   return null;
         }
-  */
+
     @Override
     public AccountResponseDTO addAccount(AccountRequestDTO account, Long clientId) {
         Account entity = mapper.map(account,Account.class);
-        Card cardEntity = mapper.map(account.getCardRequestDTO(), Card.class);
         Client client = clientRepository.findById(clientId).get();
 
         //TODO Mapper
@@ -62,10 +59,8 @@ public class AccountServiceIml implements AccountService{
         accounts.add(entity);
         client.setAccounts(accounts);
 
-        Card cardSave = cardRepository.save(cardEntity);
 
-
-        //entity.gsetClients(client);
+//        entity. setClients(client);
         //accounts.add(entity);
         Account savedAccount = accountRepository.save(entity);
         AccountResponseDTO res = mapper.map(savedAccount, AccountResponseDTO.class);

@@ -12,12 +12,12 @@ public enum ClientStatus {
     VIP(2, "vip");
 
 
-    private final Integer cardTypeId;
+    private final Integer clientStatus;
     private final String externalTypeId;
     public static ClientStatus findByTypeId(Integer typeId){
         if (typeId==null){return null;}
         return Arrays.stream(ClientStatus.values())
-                .filter(c->c.getCardTypeId().equals(typeId))
+                .filter(c->c.getClientStatus().equals(typeId))
                 .findFirst()
                 .orElse(null);
     }

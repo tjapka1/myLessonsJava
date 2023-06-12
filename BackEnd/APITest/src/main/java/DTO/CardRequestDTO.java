@@ -1,13 +1,14 @@
-package de.aittr.bd1.dto;
+package DTO;
 
-import de.aittr.bd1.entity.CardType;
+
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
+@Builder
 public class CardRequestDTO {
     private String number;
-    private CardType cardType;
+    private String cardType;
     private Long accountId;
 }

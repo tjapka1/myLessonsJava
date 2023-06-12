@@ -1,13 +1,14 @@
 package DTO;
 
-import lombok.*;
 
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Setter
-@Getter
-@ToString
+@Data
 @Builder
 public class AddressRequestDTO {
+    private String addressType;
     private String street;
     private int houseNumber;
     private String city;
