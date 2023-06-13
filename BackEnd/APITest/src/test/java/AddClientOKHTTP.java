@@ -109,7 +109,7 @@ public class AddClientOKHTTP {
 
     }
 
-    @Test
+
     private void aadClientAddressHome(Long id) throws IOException {
         Long idIntern = id;
         //if (id < 0){idIntern=id;}
