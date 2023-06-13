@@ -18,7 +18,8 @@ public class AddClientOKHTTP {
     @Test
     public void AddClientSuccessTest() throws IOException {
         int i = new Random().nextInt(1000)+1000;
-        ClientRequestDTO clientDto = ClientRequestDTO.builder().clientStatus("").name("Vason"+i).build();
+        int j = new Random().nextInt(20)+10;
+        ClientRequestDTO clientDto = ClientRequestDTO.builder().clientStatus("").name("Vason"+i).age(j).build();
 
         RequestBody body = RequestBody.create(gson.toJson(clientDto),JSON);
         Request request = new Request.Builder()
@@ -29,8 +30,9 @@ public class AddClientOKHTTP {
         Assert.assertTrue(response.isSuccessful());
 
         ClientResponseDTO clientResponseDTO = gson.fromJson(response.body().string(), ClientResponseDTO.class);
-        System.out.println(clientResponseDTO.getId());
+        System.out.println("ID: "+clientResponseDTO.getId());
         System.out.println(clientResponseDTO.getName());
+        System.out.println("Year: "+clientResponseDTO.getAge());
         System.out.println("-----------Addresses------------");
         aadClientAddressWork(clientResponseDTO.getId());
         aadClientAddressHome(clientResponseDTO.getId());

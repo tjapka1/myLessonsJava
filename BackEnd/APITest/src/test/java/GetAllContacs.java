@@ -2,6 +2,7 @@ import DTO.AllClientsDTO;
 import DTO.ClientResponseDTO;
 import com.google.gson.Gson;
 import io.restassured.http.ContentType;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -13,9 +14,10 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 
 public class GetAllContacs {
+    private final MediaType JSON = MediaType.get("application/json;charset=utf-8");
     Gson gson = new Gson();
     OkHttpClient client = new OkHttpClient();
-    private final static String URL = "http://localhost:8080/clients";
+    private final static String URL = "http://localhost:8080/clients/";
 
 
     @Test
@@ -33,7 +35,29 @@ public class GetAllContacs {
 
     @Test
     public void getAllClientsSuccess() throws IOException {
-        Request request = (new Request.Builder()).url("http://localhost:8080/clients").get().build();
+        Request request = (new Request.Builder()).url(URL).get().build();
+        Response response = this.client.newCall(request).execute();
+        System.out.println("bvcx   " + response.body().toString());
+        //Assert.assertTrue(response.isSuccessful());
+
+        AllClientsDTO allClientsDTO = (AllClientsDTO)this.gson.fromJson(response.body().string(), AllClientsDTO.class);
+        System.out.println(allClientsDTO.getClients().size());
+
+        List<ClientResponseDTO> clients = allClientsDTO.getClients();
+
+
+        for (ClientResponseDTO client : clients) {
+            System.out.println(client.getId());
+            //System.out.println(client.getAccounts().get(1).);
+            //PrintStream var10000 = System.out;
+            String var10001 = client.getName();
+            //var10000.println(var10001);
+            System.out.println("==================================================");
+        }
+    }
+    @Test
+    public void getAllClientsSuccess1() throws IOException {
+        Request request = (new Request.Builder()).url(URL).get().build();
         Response response = this.client.newCall(request).execute();
         System.out.println("bvcx   "+ response.body().toString());
         //Assert.assertTrue(response.isSuccessful());

@@ -68,5 +68,10 @@ public class ClientController {
         clientService.deleteClient(id);
     }
 
+    @GetMapping("/age")
+    public List<ClientResponseDTO> getListAge(@RequestParam(name="age") Integer age){
+        return clientService.getListByAge(age);
+    }
+
 
 }

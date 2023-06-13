@@ -12,6 +12,7 @@ public class ClientResponseDTO {
     private Long id;
     private ClientStatus clientStatus;
     private String name;
+    private Integer age;
     private List<AccountResponseDTO> accounts;
     private List<AddressResponseDTO> addresses;
 }

@@ -12,6 +12,7 @@ public interface ClientService {
     ClientResponseDTO addClient(ClientRequestDTO client);
     ClientResponseDTO updateClient(Long id, ClientRequestDTO client);
     void deleteClient(Long id);
+    List<ClientResponseDTO> getListByAge(Integer age);
 
 
 }

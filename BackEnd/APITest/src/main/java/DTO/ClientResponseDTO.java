@@ -13,7 +13,8 @@ public class ClientResponseDTO {
     private Long id;
     private String clientStatus;
     private String name;
-    private List<AccountResponseDTO> accounts;
+    private Integer age;
     private List<AddressResponseDTO> addresses;
+    private List<AccountResponseDTO> accounts;
 }
 

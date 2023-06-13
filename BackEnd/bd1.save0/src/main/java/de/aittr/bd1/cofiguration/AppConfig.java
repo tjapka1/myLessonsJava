@@ -16,7 +16,7 @@ public class AppConfig {
     public ModelMapper getMapper(){
         ModelMapper mapper =  new ModelMapper();
 
-        TypeMap<ClientRequestDTO, Client> clientToEntity = mapper.createTypeMap(ClientRequestDTO.class, Client.class);
+    /*    TypeMap<ClientRequestDTO, Client> clientToEntity = mapper.createTypeMap(ClientRequestDTO.class, Client.class);
         clientToEntity.setPostConverter(d->{
            Client client = d.getDestination();
            //client.getAccount().setClient(client);
@@ -25,6 +25,8 @@ public class AppConfig {
         });
         TypeMap<CardRequestDTO, Card> cardTypeMap= mapper.createTypeMap(CardRequestDTO.class, Card.class);
         cardTypeMap.addMappings(m->m.skip(Card::setId));
+
+     */
         return mapper;
     }
 }

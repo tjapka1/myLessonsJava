@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 public class ClientRequestDTO {
     private ClientStatus clientStatus;
     private String name;
+    private Integer age;
 
     //private AccountRequestDTO account;
     //private AddressRequestDTO address;

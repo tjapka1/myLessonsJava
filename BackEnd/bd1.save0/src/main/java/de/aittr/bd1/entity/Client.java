@@ -23,6 +23,9 @@ public class Client {
     @Column(name="name")
     private String name;
 
+    @Column(name="age")
+    private Integer age;
+
     @Convert(converter = ClientStatusConverter.class)
     @Column(name = "clientStatus")
     private ClientStatus clientStatus;

@@ -5,6 +5,8 @@ import de.aittr.bd1.dto.ClientRequestDTO;
 import de.aittr.bd1.dto.ClientResponseDTO;
 import de.aittr.bd1.entity.Account;
 import de.aittr.bd1.entity.Client;
+import de.aittr.bd1.repository.CardRepository;
+import de.aittr.bd1.repository.ClientRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -17,7 +19,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 
 public class ClientServiceImp implements ClientService{
-    private final JpaRepository<Client, Long> clientRepository;
+    private final ClientRepository clientRepository;
     private final ModelMapper mapper;
 
     @Override
@@ -58,6 +60,14 @@ public class ClientServiceImp implements ClientService{
             return mapper.map(clientRepository.save(entity), ClientResponseDTO.class);
         }
         return null;
+    }
+    public List<ClientResponseDTO> getListByAge(Integer age){
+
+        List<Client> clients = clientRepository.findAllByAge2(age);
+        return clients.stream()
+                .filter(c->c.getAge().equals(age))
+                .map(a->mapper.map(a, ClientResponseDTO.class))
+                .collect(Collectors.toList());
     }
 
     @Override
