@@ -23,6 +23,7 @@ public enum CardType {
                 .findFirst()
                 .orElse(null);
     }
+    /*
     @JsonCreator
     public static CardType findByExternalTypeId(String typeId){
         if (typeId==null){return null;}
@@ -31,4 +32,6 @@ public enum CardType {
                 .findFirst()
                 .orElse(null);
     }
+
+     */
 }

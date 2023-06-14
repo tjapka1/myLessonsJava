@@ -23,10 +23,11 @@ public class AppConfig {
            //client.getAddress().setClient(client);
            return client;
         });
+     */
         TypeMap<CardRequestDTO, Card> cardTypeMap= mapper.createTypeMap(CardRequestDTO.class, Card.class);
         cardTypeMap.addMappings(m->m.skip(Card::setId));
 
-     */
+
         return mapper;
     }
 }

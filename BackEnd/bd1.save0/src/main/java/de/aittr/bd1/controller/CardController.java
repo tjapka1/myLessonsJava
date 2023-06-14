@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/carde")
+@RequestMapping("/cards")
 @RequiredArgsConstructor
 public class CardController {
     private final CardService cardService;

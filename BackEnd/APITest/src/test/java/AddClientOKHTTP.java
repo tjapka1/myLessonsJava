@@ -34,20 +34,19 @@ public class AddClientOKHTTP {
         System.out.println(clientResponseDTO.getName());
         System.out.println("Year: "+clientResponseDTO.getAge());
         System.out.println("-----------Addresses------------");
-        aadClientAddressWork(clientResponseDTO.getId());
-        aadClientAddressHome(clientResponseDTO.getId());
+        aadClientAddress(clientResponseDTO.getId(), "WORK");
+        aadClientAddress(clientResponseDTO.getId(), "HOME");
         System.out.println("-----------Accounts------------");
-        aadClientAccountDebit(clientResponseDTO.getId());
-        aadClientAccountCredit(clientResponseDTO.getId());
+        aadClientAccount(clientResponseDTO.getId(), "DEBIT");
+        aadClientAccount(clientResponseDTO.getId(), "CREDIT");
         Assert.assertTrue(clientResponseDTO.getName().contains("Vason"+i));
 
 }
-
-    private void aadClientAccountDebit(Long id) throws IOException {
+    private void aadClientAccount(Long id, String accountType) throws IOException {
         Long idIntern = id;
         //if (id >= 0){idIntern=id;}
         int i = new Random().nextInt(1000)+1000;
-        AccountRequestDTO accountDTO = AccountRequestDTO.builder().iban("DE"+i).accountType("DEBIT").build();
+        AccountRequestDTO accountDTO = AccountRequestDTO.builder().iban("DE"+i).accountType(accountType).build();
 
         RequestBody body = RequestBody.create(gson.toJson(accountDTO),JSON);
         Request request = new Request.Builder().url("http://localhost:8080/clients/"+idIntern+"/accounts").post(body).build();
@@ -59,42 +58,38 @@ public class AddClientOKHTTP {
         System.out.println(accountResponseDTO.getId());
         System.out.println(accountResponseDTO.getAccountType());
         System.out.println(accountResponseDTO.getIban());
+        addCard(accountResponseDTO.getId(), "GIRO");
+        addCard(accountResponseDTO.getId(), "VISA");
+        addCard(accountResponseDTO.getId(), "MAESTRO");
+        addCard(accountResponseDTO.getId(), "MASTERCARD");
         System.out.println("----------------------");
-    }
+        }
 
-    private void aadClientAccountCredit(Long id) throws IOException {
+    private void addCard(Long id, String typeCard) throws IOException {
         Long idIntern = id;
         //if (id >= 0){idIntern=id;}
         int i = new Random().nextInt(1000)+1000;
-        AccountRequestDTO accountDTO = AccountRequestDTO.builder().iban("DE"+i).accountType("CREDIT").build();
+        CardRequestDTO cardRequestDTO = CardRequestDTO.builder().cardType(typeCard).number("DE2323"+i).accountId(idIntern).build();
 
-        RequestBody body = RequestBody.create(gson.toJson(accountDTO),JSON);
-        Request request = new Request.Builder().url("http://localhost:8080/clients/"+idIntern+"/accounts").post(body).build();
+        RequestBody body = RequestBody.create(gson.toJson(cardRequestDTO), JSON);
+        Request request = new Request.Builder().url("http://localhost:8080/cards").post(body).build();
 
         Response response = client.newCall(request).execute();
         Assert.assertTrue(response.isSuccessful());
 
-        AccountResponseDTO accountResponseDTO = gson.fromJson(response.body().string(), AccountResponseDTO.class);
-        System.out.println(accountResponseDTO.getId());
-        System.out.println(accountResponseDTO.getAccountType());
-        System.out.println(accountResponseDTO.getIban());
-        addCardVisa(accountResponseDTO.getId());
-        System.out.println("----------------------");
+      /*  CardResponseDTO cardResponseDTO = gson.fromJson(response.body().string(), CardResponseDTO.class);
+
+       // System.out.println(cardResponseDTO.getId());
+        System.out.println(cardResponseDTO.getCardType());
+        System.out.println(cardResponseDTO.getNumber());
+*/
     }
 
-    private void addCardVisa(Long id) {
+    private void aadClientAddress(Long id, String addressStatus) throws IOException {
         Long idIntern = id;
         //if (id >= 0){idIntern=id;}
         int i = new Random().nextInt(1000)+1000;
-
-    }
-
-    @Test
-    private void aadClientAddressWork(Long id) throws IOException {
-        Long idIntern = id;
-        //if (id >= 0){idIntern=id;}
-        int i = new Random().nextInt(1000)+1000;
-        AddressRequestDTO addressDTO = AddressRequestDTO.builder().addressType("WORK").houseNumber(i).street("derebasovskaja").city("Odessa").build();
+        AddressRequestDTO addressDTO = AddressRequestDTO.builder().addressType(addressStatus).houseNumber(i).street("derebasovskaja").city("Odessa").build();
 
         RequestBody body = RequestBody.create(gson.toJson(addressDTO),JSON);
         Request request = new Request.Builder().url("http://localhost:8080/clients/"+idIntern+"/address").post(body).build();
@@ -110,28 +105,5 @@ public class AddClientOKHTTP {
         System.out.println("--------------------------------------");
 
     }
-
-
-    private void aadClientAddressHome(Long id) throws IOException {
-        Long idIntern = id;
-        //if (id < 0){idIntern=id;}
-        int i = new Random().nextInt(1000)+1000;
-        AddressRequestDTO addressDTO = AddressRequestDTO.builder().addressType("HOME").houseNumber(i).street("Myasoedovskaja").city("Odessa").build();
-
-        RequestBody body = RequestBody.create(gson.toJson(addressDTO),JSON);
-        Request request = new Request.Builder().url("http://localhost:8080/clients/"+idIntern+"/address").post(body).build();
-
-        Response response = client.newCall(request).execute();
-        Assert.assertTrue(response.isSuccessful());
-
-        AddressResponseDTO addressResponseDTO = gson.fromJson(response.body().string(), AddressResponseDTO.class);
-        System.out.println(addressResponseDTO.getAddressType());
-        System.out.println(addressResponseDTO.getCity());
-        System.out.println(addressResponseDTO.getStreet());
-        System.out.println(addressResponseDTO.getHouseNumber());
-        System.out.println("------------------");
-
-    }
-
 
 }
