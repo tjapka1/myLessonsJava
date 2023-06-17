@@ -15,8 +15,17 @@ public class AddClientOKHTTP {
     Gson gson =new Gson();
     OkHttpClient client = new OkHttpClient();
 
-    @Test
-    public void AddClientSuccessTest() throws IOException {
+@Test
+    public void addMoreClients(int clients) throws IOException {
+        clients=12;
+        int count=0;
+    while (clients==count) {
+            addClientSuccessTest();
+            count++;
+        }
+    }
+  @Test
+    public void addClientSuccessTest() throws IOException {
         int i = new Random().nextInt(1000)+1000;
         int j = new Random().nextInt(20)+10;
         ClientRequestDTO clientDto = ClientRequestDTO.builder().clientStatus("").name("Vason"+i).age(j).build();
