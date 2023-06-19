@@ -19,9 +19,7 @@ public class App {
 
 
     public static void main(String[] args) {
-        System.out.println("ddfgh");
-        String res= findDlinString(List.of("aa", "aaa", "a","aaaaaaaaaaaaaaaa"));
-        System.out.println(res);
+
     }
 
     public static String findDlinString(List<String> list){
